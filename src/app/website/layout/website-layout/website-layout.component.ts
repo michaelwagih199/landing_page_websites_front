@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NavbarComponent } from "../../widgets/navbar/navbar.component";
+import { NavbarComponent } from "../../widgets/navbar.component";
 
 @Component({
     selector: 'app-website-layout',

@@ -5,13 +5,15 @@ module.exports = {
   theme: {
     extend: {
       colors:{
-        primary_blue: {
+        blue_primary: {
           light: '#3488C6',
           extraLight:'#CEE2F1',
-          dark:'#184465',
+          dark_1:'#186CAB',
+          dark_2:'#184465',
+          dark_3:'#003861',
         },
         natural:{
-          black:'#050E14',
+          black:'#0A1B28',
           while:'#F5F7F3',
           gray:'#5E5E5E'
         }
