@@ -32,7 +32,7 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": ["src/assets/js/main.js"]
           },
           "configurations": {
             "production": {
@@ -100,5 +100,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "0cc81286-51ec-4f2e-be79-8b916a1886d6"
   }
 }
