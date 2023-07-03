@@ -1,0 +1,27 @@
+.hero {
+  background: linear-gradient(
+      rgba(52, 136, 198, 0.09),
+      rgba(52, 136, 198, 0.09)
+    ),
+    url("/assets/images/hero_bg.png") no-repeat;
+  background-size: 100%;
+  &__main {
+    position: relative;
+  }
+
+  &__bg {
+    width: 100%;
+    object-fit: cover;
+    height: 29rem;
+  }
+  &__char {
+    // position: absolute;
+    // top: 0;
+    // right: 6rem;
+  }
+  &__cta {
+    position: absolute;
+    top: 0;
+    left: 6rem;
+  }
+}

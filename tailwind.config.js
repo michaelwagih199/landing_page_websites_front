@@ -11,12 +11,14 @@ module.exports = {
           dark_1:'#186CAB',
           dark_2:'#184465',
           dark_3:'#003861',
+          dark_4:'#00467E',
         },
         natural:{
           black:'#0A1B28',
           while:'#F5F7F3',
-          gray:'#5E5E5E'
-        }
+          customGray:'#5E5E5E'
+        },
+        accent:'#E29E21'
       },
 
       fontFamily:{
@@ -24,7 +26,9 @@ module.exports = {
       },
       maxWidth:{
         container:'75rem',
-
+      },
+      width: {
+        '128': '27.188rem',
       }
 
     },

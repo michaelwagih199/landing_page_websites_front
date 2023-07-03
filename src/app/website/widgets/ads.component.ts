@@ -2,20 +2,19 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-button',
+  selector: 'app-ads',
   standalone: true,
   imports: [CommonModule],
   template: `
-    <button
-      (click)="btnClick.emit()"
-      [ngClass]="btnStyle"
-    >
-      {{ btnTitle }}
-    </button>
+    <section class="mt-8">
+      <div class="container">
+        <img src="/assets/images/ads.png" alt="" srcset="" />
+      </div>
+    </section>
   `,
   styleUrls: ['./widget-style.scss'],
 })
-export class ButtonComponents {
+export class AddsComponent {
   @Input() btnTitle: string = 'Order Now';
   @Input() btnStyle: string = '';
   @Output() btnClick = new EventEmitter();
