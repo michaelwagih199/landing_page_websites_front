@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
       </div>
     </section>
   `,
-  styleUrls: ['./widget-style.scss'],
+  styleUrls: ['../_home-style.scss'],
 })
 export class AddsComponent {
   @Input() btnTitle: string = 'Order Now';

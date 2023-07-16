@@ -25,3 +25,14 @@
     left: 6rem;
   }
 }
+
+.app-underline {
+  &::after {
+    width: 100%;
+    display: block;
+    content: "";
+    height: 3px;
+    border-radius: 8px;
+    background-color: #E29E21;
+  }
+}
