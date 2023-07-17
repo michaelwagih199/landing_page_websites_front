@@ -5,6 +5,7 @@ import { AboutUs } from './sections/about-us.component';
 import { AddsComponent } from './sections/ads.component';
 import { SectionService } from "./sections/service-section.component";
 import { WhyChoseUs } from "./sections/why-chose-us.component";
+import { TestimonialSection } from "./sections/testimonial.component";
 
 @Component({
     selector: 'app-home',
@@ -17,7 +18,8 @@ import { WhyChoseUs } from "./sections/why-chose-us.component";
     <home-section-why-chose-us></home-section-why-chose-us>
     <home-section-service serviceTitle="New services"></home-section-service>
     <app-ads></app-ads>
+    <home-section-testimonial></home-section-testimonial>
   `,
-    imports: [CommonModule, HeroApp, AboutUs, AddsComponent, SectionService, WhyChoseUs]
+    imports: [CommonModule, HeroApp, AboutUs, AddsComponent, SectionService, WhyChoseUs, TestimonialSection]
 })
 export class HomeComponent {}

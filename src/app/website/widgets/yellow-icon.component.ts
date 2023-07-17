@@ -6,8 +6,8 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <section class="flex flex-col gap-2 justify-center my-4 ">
-      <div class="flex rounded-full w-20 h-20 bg-accent p-3 m-auto">
+    <section class="flex flex-col gap-2 justify-center ">
+      <div class="flex rounded-full items-center w-16 h-16 bg-accent p-3 m-auto">
         <img [src]="iconSrc" alt="Icon" />
       </div>
       <p class="text-blue_primary-dark_4 text-xl">{{iconTitle}}</p>
