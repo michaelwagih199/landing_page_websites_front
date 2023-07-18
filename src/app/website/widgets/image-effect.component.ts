@@ -6,11 +6,11 @@ import { Component, Input } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <div class="relative group h-[29rem] w-[32rem]">
+    <div [class]="imageClass">
       <img
         [src]="imageSrc"
         alt=""
-        class="rounded-lg object-cover w-full h-full  "
+        class="rounded-lg object-cover w-full h-full"
       />
       <div
         class="flex justify-center rounded-lg  items-center opacity-0 bg-gradient-to-t from-gray-800 via-gray-800 to-opacity-30 group-hover:opacity-50 absolute top-0 left-0 h-full w-full transition duration-300 ease-in-out"
@@ -19,13 +19,15 @@ import { Component, Input } from '@angular/core';
         class="absolute top-0 left-0 w-full h-full rounded-lg flex justify-center items-center opacity-0 hover:opacity-100"
       >
         <div class="flex-row text-center">
-          <h1 class="text-gray-50 font-bold text-xl">{{hoverTitle}}</h1>
+          <h1 [class]="hoverTitleStyle">{{ hoverTitle }}</h1>
         </div>
       </div>
     </div>
   `,
 })
 export class ImageShadowEffectWidget {
+  @Input() imageClass: string = `relative group h-[29rem] w-[32rem]`;
   @Input() hoverTitle: string = '';
+  @Input() hoverTitleStyle: string = 'text-gray-50 font-bold text-xl';
   @Input() imageSrc: string = '';
 }

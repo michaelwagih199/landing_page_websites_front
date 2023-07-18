@@ -16,6 +16,7 @@ module.exports = {
         natural:{
           black:'#0A1B28',
           while:'#F5F7F3',
+          blueWhite:'#F0FAFF',
           customGray:'#5E5E5E'
         },
         accent:'#E29E21'
