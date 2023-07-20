@@ -16,7 +16,10 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./widget-style.scss'],
 })
 export class ButtonComponents {
-  @Input() btnTitle: string = 'Order Now';
-  @Input() btnStyle: string = '';
-  @Output() btnClick = new EventEmitter();
+  @Input({ required: true })
+  btnTitle: string = 'Order Now';
+  @Input({ required: true })
+  btnStyle: string = '';
+  @Output()
+  btnClick = new EventEmitter();
 }

@@ -17,7 +17,7 @@ module.exports = {
           black:'#0A1B28',
           while:'#F5F7F3',
           blueWhite:'#F0FAFF',
-          customGray:'#5E5E5E'
+          customGray:'#80909C'
         },
         accent:'#E29E21'
       },

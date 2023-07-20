@@ -7,7 +7,7 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule],
   template: `
     <div class="flex items-center justify-around">
-      <p class="text-natural-customGray text-base">View all</p>
+      <p class="text-natural-customGray text-base cursor-pointer hover:text-accent active:text-blue_primary-light transition-colors duration-200 ">View all</p>
       <svg
           class="rotate-180 ml-8"
           width="8"

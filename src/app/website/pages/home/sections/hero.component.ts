@@ -24,7 +24,8 @@ import { STYLES } from '../../../../utils/constants';
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path class="hover:stroke-accent  cursor-pointer active:bg-blue_primary-light transition-colors duration-200"
+          <path
+            class="hover:stroke-accent  cursor-pointer active:bg-blue_primary-light transition-colors duration-200"
             d="M7 13L1 7L7 1"
             stroke="#00467E"
             stroke-width="2"
@@ -34,7 +35,9 @@ import { STYLES } from '../../../../utils/constants';
         </svg>
 
         <div class="flex flex-col gap-4">
-          <h1 class="text-blue_primary-dark_4 text-4xl">Choose The best For Your Skin</h1>
+          <h1 class="text-blue_primary-dark_4 text-4xl">
+            Choose The best For Your Skin
+          </h1>
           <p class="text-xl text-natural-customGray">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id
             est sed lacus volutpat lobortis. Lorem ipsum
@@ -55,7 +58,7 @@ import { STYLES } from '../../../../utils/constants';
         <div class="hero__char">
           <img src="{{ charImag }}" alt="" />
         </div>
-
+<!--
         <svg
           class="rotate-180 ml-8"
           width="8"
@@ -64,9 +67,27 @@ import { STYLES } from '../../../../utils/constants';
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path class="hover:stroke-accent cursor-pointer transition-colors duration-200"
+          <path
+            class="hover:stroke-accent cursor-pointer transition-colors duration-200"
             d="M7 13L1 7L7 1"
             stroke="#00467E"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg> -->
+        <svg
+
+          xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="28"
+          viewBox="0 0 28 28"
+          fill="none"
+        >
+          <rect width="28" height="28" rx="8" fill="#00467E" />
+          <path
+            d="M11 20L17 14L11 8"
+            stroke="white"
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"

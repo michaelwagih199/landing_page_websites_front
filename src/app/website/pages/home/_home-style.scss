@@ -31,8 +31,19 @@
     width: 100%;
     display: block;
     content: "";
-    height: 3px;
-    border-radius: 8px;
-    background-color: #E29E21;
+    height: 0.188rem;
+    border-radius: 0.5rem;
+    background-color: #e29e21;
+  }
+  &__footer {
+    &::after {
+      width: 50%;
+      display: block;
+      content: "";
+      margin-top: 0.25rem;
+      height: 0.188rem;
+      border-radius: 0.5rem;
+      background-color: #e29e21;
+    }
   }
 }

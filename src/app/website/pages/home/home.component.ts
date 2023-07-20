@@ -7,6 +7,7 @@ import { SectionService } from "./sections/service-section.component";
 import { WhyChoseUs } from "./sections/why-chose-us.component";
 import { TestimonialSection } from "./sections/testimonial.component";
 import { StayTunedSection } from "./sections/stay-tuned.component";
+import { FooterComponent } from "./sections/footer.component";
 
 @Component({
     selector: 'app-home',
@@ -22,7 +23,8 @@ import { StayTunedSection } from "./sections/stay-tuned.component";
     <home-section-testimonial></home-section-testimonial>
     <home-section-stay-tuned></home-section-stay-tuned>
     <app-ads></app-ads>
+    <footer-component></footer-component>
   `,
-    imports: [CommonModule, HeroApp, AboutUs, AddsComponent, SectionService, WhyChoseUs, TestimonialSection, StayTunedSection]
+    imports: [CommonModule, HeroApp, AboutUs, AddsComponent, SectionService, WhyChoseUs, TestimonialSection, StayTunedSection, FooterComponent]
 })
 export class HomeComponent {}
