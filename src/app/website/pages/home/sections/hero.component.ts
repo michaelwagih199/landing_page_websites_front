@@ -17,17 +17,23 @@ import { STYLES } from '../../../../utils/constants';
     <section class="hero bg-neutral-200">
       <div class="container flex justify-between items-center gap-4">
         <svg
-          class="mr-8"
-          width="8"
-          height="14"
-          viewBox="0 0 8 14"
-          fill="none"
+        class="rotate-180 mr-8"
           xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="28"
+          viewBox="0 0 28 28"
+          fill="none"
         >
+          <rect
+            class="hover:fill-accent  cursor-pointer transition-colors duration-200"
+            width="28"
+            height="28"
+            fill="#00467E"
+            rx="2"
+          />
           <path
-            class="hover:stroke-accent  cursor-pointer active:bg-blue_primary-light transition-colors duration-200"
-            d="M7 13L1 7L7 1"
-            stroke="#00467E"
+            d="M11 20L17 14L11 8"
+            stroke="white"
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
@@ -58,33 +64,21 @@ import { STYLES } from '../../../../utils/constants';
         <div class="hero__char">
           <img src="{{ charImag }}" alt="" />
         </div>
-<!--
         <svg
-          class="rotate-180 ml-8"
-          width="8"
-          height="14"
-          viewBox="0 0 8 14"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            class="hover:stroke-accent cursor-pointer transition-colors duration-200"
-            d="M7 13L1 7L7 1"
-            stroke="#00467E"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg> -->
-        <svg
-
+        class="ml-8"
           xmlns="http://www.w3.org/2000/svg"
           width="28"
           height="28"
           viewBox="0 0 28 28"
           fill="none"
         >
-          <rect width="28" height="28" rx="8" fill="#00467E" />
+          <rect
+            class="hover:fill-accent  cursor-pointer transition-colors duration-200"
+            width="28"
+            height="28"
+            fill="#00467E"
+            rx="2"
+          />
           <path
             d="M11 20L17 14L11 8"
             stroke="white"
