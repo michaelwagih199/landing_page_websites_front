@@ -23,7 +23,6 @@ import { FooterComponent } from "./sections/footer.component";
     <home-section-testimonial></home-section-testimonial>
     <home-section-stay-tuned></home-section-stay-tuned>
     <app-ads></app-ads>
-    <footer-component></footer-component>
   `,
     imports: [CommonModule, HeroApp, AboutUs, AddsComponent, SectionService, WhyChoseUs, TestimonialSection, StayTunedSection, FooterComponent]
 })
