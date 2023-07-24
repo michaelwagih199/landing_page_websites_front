@@ -55,9 +55,9 @@ import { STYLES } from '../../../../utils/constants';
               btnTitle="Order Now"
             ></app-button>
             <app-button
-              btnStyle="bg-blue_primary-dark_4 text-lg hover:bg-accent active:text-blue_primary-dark_4 text-white py-2 w-36 px-2 rounded-full transition-colors duration-200"
+              [btnStyle]="btnBlue"
               (btnClick)="onOrderClick()"
-              btnTitle="Order Now"
+              btnTitle="Know More"
             ></app-button>
           </div>
         </div>
@@ -104,6 +104,7 @@ export class HeroApp implements AfterViewInit {
   charImag: string = '/assets/images/hero_char_1.png';
   constructor(private elRef: ElementRef, private renderer: Renderer2) {}
   btnWhite = STYLES.btnWhite;
+  btnBlue = STYLES.btnBlue;
 
   ngAfterViewInit(): void {
     // this.sliderImages =
