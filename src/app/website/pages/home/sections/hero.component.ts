@@ -15,9 +15,12 @@ import { STYLES } from '../../../../utils/constants';
   standalone: true,
   template: `
     <section class="hero bg-neutral-200">
-      <div class="container flex justify-between items-center gap-4">
+      <div class="container flex flex-col-reverse py-4  justify-between items-center gap-3 text-center px-8 md:flex-row md:text-left md:py-0">
+        
+
+
         <svg
-        class="rotate-180 mr-8"
+        class="rotate-180 mr-8 hidden md:block"
           xmlns="http://www.w3.org/2000/svg"
           width="28"
           height="28"
@@ -41,14 +44,14 @@ import { STYLES } from '../../../../utils/constants';
         </svg>
 
         <div class="flex flex-col gap-4">
-          <h1 class="text-blue_primary-dark_4 text-4xl">
+          <h1 class="text-blue_primary-dark_4 text-2xl md:text-4xl">
             Choose The best For Your Skin
           </h1>
-          <p class="text-xl text-natural-customGray">
+          <p class="text-base text-natural-customGray md:text-xl">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id
             est sed lacus volutpat lobortis. Lorem ipsum
           </p>
-          <div class="flex gap-4 mt-6">
+          <div class="flex justify-center gap-4 mt-2 md:mt-4  md:justify-start">
             <app-button
               [btnStyle]="btnWhite"
               (btnClick)="onOrderClick()"
@@ -61,11 +64,11 @@ import { STYLES } from '../../../../utils/constants';
             ></app-button>
           </div>
         </div>
-        <div class="hero__char">
+        <div class="w-1/2">
           <img src="{{ charImag }}" alt="" />
         </div>
         <svg
-        class="ml-8"
+        class="ml-8 hidden md:block"
           xmlns="http://www.w3.org/2000/svg"
           width="28"
           height="28"

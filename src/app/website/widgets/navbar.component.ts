@@ -8,7 +8,7 @@ import { STYLES } from 'src/app/utils/constants';
   selector: 'app-navbar',
   standalone: true,
   template: `
-    <header class="bg-blue_primary-light h-20">
+    <header class="bg-blue_primary-light h-20 ">
       <nav class="flex items-center justify-between mx-auto container h-full">
         <div>
           <a href="/">
