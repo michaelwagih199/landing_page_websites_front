@@ -17,7 +17,7 @@ import { WidgetYellowIcon } from '../../../widgets/yellow-icon.component';
           ></flower_widget>
           <p class="text-blue_primary-dark_4 text-4xl">What you should know</p>
         </div>
-        <div class="flex justify-around">
+        <div class="flex flex-col items-center gap-4 justify-around md:flex-row">
           <widget-yellow-icon
             iconSrc="/assets/images/icons/affordable_price.svg"
             iconTitle="Affordable price"

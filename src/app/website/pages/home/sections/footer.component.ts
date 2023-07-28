@@ -11,8 +11,8 @@ import { FooterContactUsWidget } from "../homewidgets/footer-contact-us.componen
     template: `
     <footer class="bg-blue_primary-dark_4 mt-8 p-9 text-white">
       <div class="container">
-        <div class="flex gap-9">
-          <div class="flex flex-col flex-1 gap-4">
+        <div class="flex flex-col gap-9 justify-center md:flex-row">
+          <div class="flex flex-col flex-1 gap-4  md:items-start">
             <a href="/">
               <img
                 class="w-28 h-auto"

@@ -9,7 +9,7 @@ import { ImageShadowEffectWidget } from '../../../widgets/image-effect.component
   template: `
     <section class="mt-8 bg-natural-blueWhite">
       <div class="container">
-        <div class="flex gap-4 p-6">
+        <div class="flex flex-col gap-4 p-6 text-center md:flex-row md:text-left">
           <div class="flex flex-1 flex-col justify-center items-center gap-8 ">
             <flower_widget
               title="StayTuned"
@@ -34,20 +34,20 @@ import { ImageShadowEffectWidget } from '../../../widgets/image-effect.component
               [imageSrc]="stayTyne1"
               [hoverTitle]="hoverTitle"
               hoverTitleStyle="text-gray-50 text-base"
-              imageClass="relative group h-[15rem] w-[9.875rem]"
+              imageClass="relative group h-[15rem] w-full"
             ></image_shadow_effect_widget>
             <image_shadow_effect_widget
               [imageSrc]="stayTyne2"
               [hoverTitle]="hoverTitle"
               hoverTitleStyle="text-gray-50 text-base"
-              imageClass="relative group h-[19.6875rem] w-[15.625rem]"
+              imageClass="relative group h-[19.6875rem] w-full"
               class="transition duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-black/30 "
             ></image_shadow_effect_widget>
             <image_shadow_effect_widget
               [imageSrc]="stayTyne3"
               [hoverTitle]="hoverTitle"
               hoverTitleStyle="text-gray-50 text-base"
-              imageClass="relative group h-[15rem] w-[9.875rem]"
+              imageClass="relative group h-[15rem] w-full"
               class="transition duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-black/30 "
             ></image_shadow_effect_widget>
           </div>
