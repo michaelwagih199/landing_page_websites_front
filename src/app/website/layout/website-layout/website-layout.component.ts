@@ -9,7 +9,7 @@ import { NaveNew } from "../../pages/home/nav-new";
     standalone: true,
     template: `
    <responsive-nav></responsive-nav>
-   <!-- <footer-component></footer-component>  -->
+   <footer-component></footer-component>
   `,
     styles: [],
     imports: [CommonModule, NavbarComponent, FooterComponent, NaveNew]

@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
   template: `
     <section class="mt-8">
       <div class="container">
-        <img src="/assets/images/ads.png" alt="" srcset="" />
+        <img class="w-full" src="/assets/images/ads.png"  alt="" srcset="" />
       </div>
     </section>
   `,

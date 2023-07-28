@@ -7,7 +7,7 @@ import { ComponentServiceCard } from 'src/app/website/widgets/service-card.compo
   selector: 'home-section-service',
   standalone: true,
   template: `
-    <section class="mt-8">
+    <section class="mt-8 px-4">
       <div class="container">
         <div class="flex justify-between items-center">
           <div>
@@ -19,7 +19,7 @@ import { ComponentServiceCard } from 'src/app/website/widgets/service-card.compo
             <component-view-base></component-view-base>
           </div>
         </div>
-        <div class="flex justify-between my-4 items-center">
+        <div class="grid grid-cols-2 gap-4 mt-2 md:grid-cols-4">
           <div *ngFor="let item of cards">
             <component-service-card
               [cardCover]="item.imgSrc"

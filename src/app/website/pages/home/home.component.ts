@@ -14,8 +14,8 @@ import { FooterComponent } from './sections/footer.component';
   standalone: true,
   template: `
     <app-hero></app-hero>
-   <app-about-us></app-about-us>
-    <!-- <app-ads></app-ads>
+    <app-about-us></app-about-us>
+    <app-ads></app-ads>
     <home-section-service
       serviceTitle="Popular services"
     ></home-section-service>
@@ -24,7 +24,7 @@ import { FooterComponent } from './sections/footer.component';
     <app-ads></app-ads>
     <home-section-testimonial></home-section-testimonial>
     <home-section-stay-tuned></home-section-stay-tuned>
-    <app-ads></app-ads> -->
+    <app-ads></app-ads>
   `,
   imports: [
     CommonModule,

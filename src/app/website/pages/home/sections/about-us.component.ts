@@ -9,8 +9,8 @@ import { ImageShadowEffectWidget } from '../../../widgets/image-effect.component
   template: `
     <section class="mt-4 md:mt-8">
       <div class="container flex flex-col justify-start items-center  gap-8 p-8 text-center md:flex-row md:gap-32 md:text-start">
-        
-        <image_shadow_effect_widget [imageSrc]="aboutUsImage" [hoverTitle]="hoverTitle"
+
+        <image_shadow_effect_widget [imageSrc]="aboutUsImage" [hoverTitle]="hoverTitle" imageClass="relative group h-[29rem] md:w-[32rem]"
           class="transition duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-black/30 "
         ></image_shadow_effect_widget>
 
