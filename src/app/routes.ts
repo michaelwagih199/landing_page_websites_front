@@ -1,8 +1,8 @@
 import { Route } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
-import { WebsiteLayoutComponent } from './layout/website-layout/website-layout.component';
+import { HomeComponent } from './website/pages/home/home.component';
+import { WebsiteLayoutComponent } from './website/layout/website-layout/website-layout.component';
 
-export const WEBSITE_ROUTES: Route[] = [
+export const routes: Route[] = [
   {
     path: '',
     component: WebsiteLayoutComponent,
@@ -14,7 +14,7 @@ export const WEBSITE_ROUTES: Route[] = [
       {
         path: '',
         loadComponent: () =>
-          import('./pages/home/home.component').then(
+          import('./website/pages/home/home.component').then(
             (mod) => mod.HomeComponent
           ),
       },
