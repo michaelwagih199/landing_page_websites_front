@@ -1,10 +1,13 @@
+import { RouterOutlet } from '@angular/router';
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  standalone: true,
+  imports: [CommonModule,RouterOutlet],
+  template:`<router-outlet></router-outlet>`
 })
-export class AppComponent {
+export class AppComponent  {
   title = 'enlight-front-app';
 }
