@@ -28,9 +28,10 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./widget-style.scss'],
 })
 export class CustomerCardWidget {
-  @Input() widgetTitle: string = 'Rania Salman';
-  @Input() widgetDesc: string =
+
+  @Input({ required: true }) widgetTitle: string = 'Rania Salman';
+  @Input({ required: true }) widgetDesc: string =
     'Very nice, polite and professional staff and drs. Changed my mood and Excellent center, Thank you all so much.';
-  @Input() widgetAvatar: string = '/assets/images/unsplash2.jpg';
-  @Input() widgetScore = 5;
+  @Input({ required: true }) widgetAvatar: string | undefined;
+  @Input({ required: true }) widgetScore = 5;
 }

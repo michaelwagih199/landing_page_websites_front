@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FlowerWidget } from '../../../widgets/flower-title.component';
 import { ButtonComponents } from '../../../widgets/btn-base.component';
 import { ImageShadowEffectWidget } from '../../../widgets/image-effect.component';
 import { WidgetYellowIcon } from '../../../widgets/yellow-icon.component';
+import { WhyChooseUs } from 'src/app/website/models/home-model';
 
 @Component({
   selector: 'home-section-why-chose-us',
@@ -12,7 +13,7 @@ import { WidgetYellowIcon } from '../../../widgets/yellow-icon.component';
       <div class="container">
         <div class="flex flex-col justify-center items-center py-3 gap-2">
           <flower_widget
-            title="Why chose us"
+            [title]="whyChoseUs?.title"
             titleClass="text-blue_primary-light text-4xl font-kissMe"
           ></flower_widget>
           <p class="text-blue_primary-dark_4 text-4xl">What you should know</p>
@@ -45,8 +46,9 @@ import { WidgetYellowIcon } from '../../../widgets/yellow-icon.component';
     WidgetYellowIcon,
   ],
 })
-export class WhyChoseUs {
-  aboutUsImage: string = '/assets/images/imgeTemp1.png';
-  hoverTitle: string = 'Pure For Pure People';
+export class WhyChoseUsComponent {
+
+  @Input({ required: true }) whyChoseUs: WhyChooseUs | undefined;
+
   onKnowMoreClick() {}
 }

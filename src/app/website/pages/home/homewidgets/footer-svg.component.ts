@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <div class="flex justify-start gap-4 it">
+    <div class="flex justify-start gap-4 items-center ">
       <svg
         width="29"
         height="29"

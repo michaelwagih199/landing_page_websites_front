@@ -1,13 +1,14 @@
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import {
-  AfterViewInit,
   Component,
-  ElementRef,
-  Renderer2,
-  ViewChild,
+  Input,
+  OnChanges,
+  SimpleChanges,
+  inject
 } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { ButtonComponents } from '../../../widgets/btn-base.component';
 
+import { Hero } from 'src/app/website/models/home-model';
 import { STYLES } from '../../../../utils/constants';
 
 @Component({
@@ -15,12 +16,11 @@ import { STYLES } from '../../../../utils/constants';
   standalone: true,
   template: `
     <section class="hero bg-neutral-200">
-      <div class="container flex flex-col-reverse py-4  justify-between items-center gap-3 text-center px-8 md:flex-row md:text-left md:py-0">
-        
-
-
+      <div
+        class="container flex flex-col-reverse py-4  justify-between items-center gap-3 text-center px-8 md:flex-row md:text-left md:py-0"
+      >
         <svg
-        class="rotate-180 mr-8 hidden md:block"
+          class="rotate-180 mr-8 hidden md:block"
           xmlns="http://www.w3.org/2000/svg"
           width="28"
           height="28"
@@ -45,11 +45,10 @@ import { STYLES } from '../../../../utils/constants';
 
         <div class="flex flex-col gap-4">
           <h1 class="text-blue_primary-dark_4 text-2xl md:text-4xl">
-            Choose The best For Your Skin
+            {{hero?.header}}
           </h1>
           <p class="text-base text-natural-customGray md:text-xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id
-            est sed lacus volutpat lobortis. Lorem ipsum
+          {{ hero?.desc}}
           </p>
           <div class="flex justify-center gap-4 mt-2 md:mt-4  md:justify-start">
             <app-button
@@ -65,10 +64,10 @@ import { STYLES } from '../../../../utils/constants';
           </div>
         </div>
         <div class="w-1/2">
-          <img src="{{ charImag }}" alt="" />
+          <img src="{{ hero?.heroImage }}" alt="" loading="lazy"/>
         </div>
         <svg
-        class="ml-8 hidden md:block"
+          class="ml-8 hidden md:block"
           xmlns="http://www.w3.org/2000/svg"
           width="28"
           height="28"
@@ -94,42 +93,22 @@ import { STYLES } from '../../../../utils/constants';
     </section>
   `,
   styleUrls: ['../_home-style.scss'],
-  imports: [CommonModule, ButtonComponents],
+  imports: [CommonModule, ButtonComponents,NgOptimizedImage],
 })
-export class HeroApp implements AfterViewInit {
-  sliderImages: any;
-  dots: any;
-  currentImg = 0;
-  interval = 3000;
-  @ViewChild('dot')
-  dot!: ElementRef;
-  imagUri: string = '/assets/images/hero_bg.png';
-  charImag: string = '/assets/images/hero_char_1.png';
-  constructor(private elRef: ElementRef, private renderer: Renderer2) {}
+export class HeroApp implements OnChanges{
+
+  @Input({ required: true }) hero: Hero |undefined;
+
+  ngOnInit(): void {
+    //console.log('fff', this.hero);
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+}
+
   btnWhite = STYLES.btnWhite;
   btnBlue = STYLES.btnBlue;
 
-  ngAfterViewInit(): void {
-    // this.sliderImages =
-    //   this.elRef.nativeElement.querySelectorAll('.slider img');
-    // this.dots = this.elRef.nativeElement.querySelectorAll('.dot');
-    // console.log(this.sliderImages);
-    //this.dot.nativeElement.setAttribute('highlight', '');
-  }
 
-  changeSlide(index: number) {
-    console.log(index);
-
-    this.renderer.setStyle(this.dot.nativeElement, 'opacity', '0');
-  }
-
-  changeColor() {
-    this.renderer.setStyle(
-      this.elRef.nativeElement,
-      'background-color',
-      'blue'
-    );
-  }
-
-  onOrderClick() {}
+  onOrderClick() { }
 }

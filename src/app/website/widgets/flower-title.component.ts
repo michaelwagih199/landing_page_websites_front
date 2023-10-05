@@ -13,6 +13,6 @@ import { Component, Input } from '@angular/core';
   `,
 })
 export class FlowerWidget {
-  @Input() title: string = 'About Us';
+  @Input() title: string | undefined ;
   @Input() titleClass: string = '';
 }

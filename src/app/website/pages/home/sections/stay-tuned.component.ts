@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FlowerWidget } from '../../../widgets/flower-title.component';
 import { ButtonComponents } from '../../../widgets/btn-base.component';
 import { ImageShadowEffectWidget } from '../../../widgets/image-effect.component';
+import { StayTuned } from 'src/app/website/models/home-model';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'home-section-stay-tuned',
@@ -29,38 +31,44 @@ import { ImageShadowEffectWidget } from '../../../widgets/image-effect.component
               btnTitle="Follow"
             ></app-button>
           </div>
-          <div class="flex flex-1 gap-4 items-end">
-            <image_shadow_effect_widget
-              [imageSrc]="stayTyne1"
-              [hoverTitle]="hoverTitle"
-              hoverTitleStyle="text-gray-50 text-base"
-              imageClass="relative group h-[15rem] w-full"
-            ></image_shadow_effect_widget>
-            <image_shadow_effect_widget
-              [imageSrc]="stayTyne2"
-              [hoverTitle]="hoverTitle"
-              hoverTitleStyle="text-gray-50 text-base"
-              imageClass="relative group h-[19.6875rem] w-full"
-              class="transition duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-black/30 "
-            ></image_shadow_effect_widget>
-            <image_shadow_effect_widget
-              [imageSrc]="stayTyne3"
-              [hoverTitle]="hoverTitle"
-              hoverTitleStyle="text-gray-50 text-base"
-              imageClass="relative group h-[15rem] w-full"
-              class="transition duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-black/30 "
-            ></image_shadow_effect_widget>
-          </div>
+          <ng-container *ngFor="let item of stayTone?.images; index as i">
+            <image_shadow_effect_widget *ngIf="i==0"
+                [imageSrc]="item"
+                [hoverTitle]="hoverTitle"
+                hoverTitleStyle="text-gray-50 text-base"
+                [imageClass]="styles.style_0"
+                class="transition duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-black/30 "
+              ></image_shadow_effect_widget>
+            <image_shadow_effect_widget *ngIf="i==1"
+                [imageSrc]="item"
+                [hoverTitle]="hoverTitle"
+                hoverTitleStyle="text-gray-50 text-base"
+                [imageClass]="styles.style_1"
+                class="transition duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-black/30 "
+              ></image_shadow_effect_widget>
+            <image_shadow_effect_widget *ngIf="i==2"
+                [imageSrc]="item"
+                [hoverTitle]="hoverTitle"
+                hoverTitleStyle="text-gray-50 text-base"
+                [imageClass]="styles.style_2"
+                class="transition duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-black/30 "
+              ></image_shadow_effect_widget>
+          </ng-container>
         </div>
       </div>
     </section>
   `,
-  imports: [FlowerWidget, ButtonComponents, ImageShadowEffectWidget],
+  imports: [FlowerWidget, ButtonComponents, CommonModule, ImageShadowEffectWidget],
 })
 export class StayTunedSection {
-  stayTyne2: string = '/assets/images/stay-tune2.png';
-  stayTyne3: string = '/assets/images/stay-tune3.png';
-  stayTyne1: string = '/assets/images/stay-tuned1.png';
+  @Input({ required: true }) stayTone: StayTuned | undefined;
+
+  styles = {
+    style_0: 'relative group h-[15rem] w-full',
+    style_1: 'relative group h-[19.6875rem] w-full',
+    style_2: 'relative group h-[15rem] w-full',
+  }
+
   hoverTitle: string = 'Follow us';
-  onFollowUsClick() {}
+  onFollowUsClick() { }
 }

@@ -1,15 +1,16 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'image_shadow_effect_widget',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, NgOptimizedImage],
   template: `
     <div [class]="imageClass">
       <img
-        [src]="imageSrc"
+      [src]="imageSrc"
         alt=""
+        loading="lazy"
         class="rounded-lg object-cover w-full h-full"
       />
       <div
@@ -27,7 +28,8 @@ import { Component, Input } from '@angular/core';
 })
 export class ImageShadowEffectWidget {
   @Input() imageClass: string = `relative group h-[29rem] w-[32rem]`;
-  @Input() hoverTitle: string = '';
+  @Input() hoverTitle: any;
   @Input() hoverTitleStyle: string = 'text-gray-50 font-bold text-xl';
-  @Input({required:true}) imageSrc: string = '';
+  @Input({ required: true }) imageSrc: any;
+
 }
