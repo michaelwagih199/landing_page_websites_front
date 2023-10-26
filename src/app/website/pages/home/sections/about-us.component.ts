@@ -21,7 +21,7 @@ import { AboutUsModel, Home } from 'src/app/website/models/home-model';
         ></image_shadow_effect_widget>
 
         <div class="flex flex-col items-center gap-2 md:gap-8 ">
-          <flower_widget
+          <flower_widget title = "About Us"
             titleClass="text-blue_primary-light text-4xl font-kissMe"
           ></flower_widget>
 

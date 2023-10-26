@@ -18,6 +18,13 @@ export const routes: Route[] = [
             (mod) => mod.HomeComponent
           ),
       },
+      {
+        path: 'about-us',
+        loadComponent: () =>
+          import('./website/pages/aboutus/about-us.component').then(
+            (mod) => mod.AboutUsComponents
+          ),
+      },
     ],
   },
 

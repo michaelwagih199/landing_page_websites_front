@@ -1,19 +1,22 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NavbarComponent } from "../../widgets/navbar.component";
-import { FooterComponent } from "../../pages/home/sections/footer.component";
-import { NaveNew } from "../../pages/home/nav-new";
+import { Component } from '@angular/core';
+import { NaveNew } from '../../pages/home/nav-new';
+import { FooterComponent } from '../../pages/home/sections/footer.component';
+import { NavbarComponent } from '../../widgets/navbar.component';
 
 @Component({
-    selector: 'app-website-layout',
-    standalone: true,
-    template: `
+  selector: 'app-website-layout',
+  standalone: true,
+  template: `
    <responsive-nav></responsive-nav>
    <footer-component></footer-component>
   `,
-    styles: [],
-    imports: [CommonModule, NavbarComponent, FooterComponent, NaveNew]
+  styleUrls: ['../_layout.scss'],
+  imports: [
+    CommonModule,
+    NavbarComponent,
+    FooterComponent,
+    NaveNew,
+  ],
 })
-export class WebsiteLayoutComponent {
-
-}
+export class WebsiteLayoutComponent {}

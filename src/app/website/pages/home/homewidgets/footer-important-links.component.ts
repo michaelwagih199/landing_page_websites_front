@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
   template: `
     <div class="flex flex-col flex-1 gap-3 ">
       <h2 class=" text-xl app-underline app-underline__footer">
-        Important Links
+        Quick Links
       </h2>
       <a
         href="#"

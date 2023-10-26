@@ -18,6 +18,7 @@ import { SectionService } from './sections/service-section.component';
 import { StayTunedSection } from './sections/stay-tuned.component';
 import { TestimonialSection } from './sections/testimonial.component';
 import { WhyChoseUsComponent } from './sections/why-chose-us.component';
+import { WidgetSocialIcon } from "../../widgets/widget-social-icon.component";
 
 @Component({
   selector: 'app-home',
@@ -35,7 +36,9 @@ import { WhyChoseUsComponent } from './sections/why-chose-us.component';
     <home-section-testimonial [testimonial]="testimonial"></home-section-testimonial>
     <home-section-stay-tuned [stayTone]="stayTuned"></home-section-stay-tuned>
     <app-ads></app-ads>
+<widget-social-icon></widget-social-icon>
     <app-spinner [isLoading]="isLoading"></app-spinner>
+
   `,
   imports: [
     CommonModule,
@@ -48,7 +51,8 @@ import { WhyChoseUsComponent } from './sections/why-chose-us.component';
     StayTunedSection,
     FooterComponent,
     SpinnerComponent,
-  ],
+    WidgetSocialIcon
+  ]
 })
 export class HomeComponent implements OnInit {
   private homeService = inject(HomeService);
@@ -68,11 +72,11 @@ export class HomeComponent implements OnInit {
         if (data.statusCode === 200) {
           console.log('Home Data', data);
 
-          this.hero = data.data[0].home.hero
-          this.aboutUs = data.data[0].home.aboutUs
-          this.whyChooseUs = data.data[0].home.whyChooseUs
-          this.testimonial = data.data[0].home.testimonial
-          this.stayTuned = data.data[0].home.stayTuned
+          this.hero = data.data.home.hero
+          this.aboutUs = data.data.home.aboutUs
+          this.whyChooseUs = data.data.home.whyChooseUs
+          this.testimonial = data.data.home.testimonial
+          this.stayTuned = data.data.home.stayTuned
         }
         this.isLoading = false;
       });

@@ -35,8 +35,8 @@ import { ComponentServiceCard } from 'src/app/website/widgets/service-card.compo
 export class SectionService {
   cards = [
     { imgSrc: '/assets/images/imgeTemp1.png ' },
-    { imgSrc: '/assets/images/unsplash2.jpg' },
-    { imgSrc: '/assets/images/unsplash2.jpg' },
+    { imgSrc: '/assets/images/imgeTemp1.png' },
+    { imgSrc: '/assets/images/imgeTemp1.png' },
     { imgSrc: '/assets/images/imgeTemp1.png' },
   ];
   @Input() serviceTitle: string = 'New Services';
