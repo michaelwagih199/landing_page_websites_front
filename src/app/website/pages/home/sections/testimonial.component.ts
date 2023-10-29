@@ -13,7 +13,7 @@ import { Testimonial } from 'src/app/website/models/home-model';
         <div class="flex flex-col justify-center items-center text-center py-3 gap-4">
           <flower_widget
             title="Our Testimonial"
-            titleClass="text-blue_primary-light text-4xl font-kissMe"
+            titleClass="text-blue_primary-light text-4xl font-flower"
           ></flower_widget>
           <p class="text-blue_primary-dark_4 text-4xl"> {{testimonial?.title}}</p>
         </div>

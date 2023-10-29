@@ -15,7 +15,7 @@ import { CommonModule } from '@angular/common';
           <div class="flex flex-1 flex-col justify-center items-center gap-8 ">
             <flower_widget
               title="StayTuned"
-              titleClass="text-blue_primary-light text-4xl font-kissMe"
+              titleClass="text-blue_primary-light text-4xl font-flower"
             ></flower_widget>
             <h1 class="text-blue_primary-dark_4 text-4xl">
               Follow Us On Instagram

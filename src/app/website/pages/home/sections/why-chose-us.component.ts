@@ -14,7 +14,7 @@ import { WhyChooseUs } from 'src/app/website/models/home-model';
         <div class="flex flex-col justify-center items-center py-3 gap-2">
           <flower_widget
             [title]="whyChoseUs?.title"
-            titleClass="text-blue_primary-light text-4xl font-kissMe"
+            titleClass="text-blue_primary-light text-4xl font-flower"
           ></flower_widget>
           <p class="text-blue_primary-dark_4 text-4xl">What you should know</p>
         </div>

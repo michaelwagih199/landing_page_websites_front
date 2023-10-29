@@ -26,16 +26,21 @@ module.exports = {
       fontFamily: {
         kissMe: ["kissMe", "Public Sans", "sans-serif"],
       },
+      fontFamily: {
+        flower: ["Aguafina Script", "Public Sans", "sans-serif"],
+      },
       maxWidth: {
         container: "75rem",
       },
       width: {
         128: "27.188rem",
       },
+
     },
     fontFamily: {
       custom: ["Josefin Sans", "Public Sans", "sans-serif"],
     },
+
   },
   plugins: [],
 };

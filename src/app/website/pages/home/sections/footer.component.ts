@@ -9,7 +9,7 @@ import { FooterContactUsWidget } from "../homewidgets/footer-contact-us.componen
     selector: 'footer-component',
     standalone: true,
     template: `
-    <footer class="bg-blue_primary-dark_4 mt-8 p-9 text-white ">
+    <footer class="bg-blue_primary-dark_1 mt-8 p-9 text-white ">
       <div class="container">
         <div class="flex flex-col gap-9 justify-center md:flex-row">
           <div class="flex flex-col flex-1 gap-4  md:items-start">

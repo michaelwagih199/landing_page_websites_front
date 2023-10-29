@@ -25,8 +25,8 @@ import { WidgetSocialIcon } from "../../widgets/widget-social-icon.component";
   standalone: true,
   template: `
     <app-hero [hero]="hero"></app-hero>
-    <app-about-us [aboutUs]="aboutUs"></app-about-us>
-    <app-ads></app-ads>
+    <!-- <app-about-us [aboutUs]="aboutUs"></app-about-us> -->
+    <!-- <app-ads></app-ads> -->
     <home-section-service
       serviceTitle="Popular services"
     ></home-section-service>
@@ -36,7 +36,7 @@ import { WidgetSocialIcon } from "../../widgets/widget-social-icon.component";
     <home-section-testimonial [testimonial]="testimonial"></home-section-testimonial>
     <home-section-stay-tuned [stayTone]="stayTuned"></home-section-stay-tuned>
     <app-ads></app-ads>
-<widget-social-icon></widget-social-icon>
+    <widget-social-icon></widget-social-icon>
     <app-spinner [isLoading]="isLoading"></app-spinner>
 
   `,
