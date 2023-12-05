@@ -29,17 +29,17 @@
     content: "";
     height: 0.188rem;
     border-radius: 0.5rem;
-    background-color: #e29e21;
+    background-color: #fff;
   }
   &__footer {
     &::after {
-      width: 30%;
+      width: 2.49144rem;
       display: block;
       content: "";
       margin-top: 0.25rem;
-      height: 0.188rem;
+      height: 0.0625rem;
       border-radius: 0.5rem;
-      background-color: #e29e21;
+      background-color: #fff;
     }
   }
 }

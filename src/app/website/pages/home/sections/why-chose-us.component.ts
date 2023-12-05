@@ -9,16 +9,16 @@ import { WhyChooseUs } from 'src/app/website/models/home-model';
   selector: 'home-section-why-chose-us',
   standalone: true,
   template: `
-    <section class="mt-8">
+    <section class="mt-12 md:mt-24">
       <div class="container">
-        <div class="flex flex-col justify-center items-center py-3 gap-2">
+        <div class="flex flex-col justify-center items-center py-3 gap-4">
           <flower_widget
-            [title]="whyChoseUs?.title"
+            title="Why choose Us"
             titleClass="text-blue_primary-light text-4xl font-flower"
           ></flower_widget>
-          <p class="text-blue_primary-dark_4 text-4xl">What you should know</p>
+          <p class="text-blue_primary-dark_1 text-3xl mx-2 text-center md:text-4xl">{{whyChoseUs?.title}}</p>
         </div>
-        <div class="flex flex-col items-center gap-4 justify-around md:flex-row">
+        <div class="flex flex-col items-center gap-7 mt-8 justify-around md:flex-row">
           <widget-yellow-icon
             iconSrc="/assets/images/icons/affordable_price.svg"
             iconTitle="Affordable price"

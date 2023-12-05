@@ -16,28 +16,20 @@ import { WidgetBaseCircularImage } from '../../../widgets/widget-base-circular-i
   selector: 'app-hero',
   standalone: true,
   template: `
-    <section class="">
-      <div
-        class="container flex flex-col py-4 justify-between items-center gap-3 text-center px-8 md:flex-row md:text-left md:py-0"
-      >
-        <div class="flex flex-col gap-4">
-          <h1 class="text-blue_primary-dark_1 text-4xl">
-            {{ hero?.header }}
-          </h1>
-          <app-button
-            [btnStyle]="btnBlue"
-            (btnClick)="onOrderClick()"
-            btnTitle="Order Now"
-          ></app-button>
-        </div>
-        <widget-base-circular-image
-          class="mt-3"
-          [widgetIsFourCircles]="true"
-          widgetImageClass="absolute w-[13.0125rem] h-[13.0125rem] rounded-full object-cover"
-          [widgetImage]="widgetImage"
-        ></widget-base-circular-image>
-      </div>
-    </section>
+<section class="mt-12 md:mt-24">
+  <div
+    class="container flex flex-col py-4 justify-between items-center gap-3 text-center px-8 md:flex-row md:text-left md:py-0">
+    <div class="flex flex-col gap-8 flex-1 w-96">
+      <h1 class="text-blue_primary-dark_1 text-3xl md:text-4xl">
+        {{ hero?.header }}
+      </h1>
+      <app-button (btnClick)="onOrderClick()" btnTitle="Order Now"></app-button>
+    </div>
+    <widget-base-circular-image class="flex-1 flex justify-center"
+      widgetImageClass="absolute w-[13.0125rem] h-[13.0125rem] rounded-full object-cover"
+      [widgetImage]="widgetImage"></widget-base-circular-image>
+  </div>
+</section>
   `,
   styleUrls: ['../_home-style.scss'],
   imports: [
@@ -58,5 +50,5 @@ export class HeroApp {
   btnWhite = STYLES.btnWhite;
   btnBlue = STYLES.btnBlue;
 
-  onOrderClick() {}
+  onOrderClick() { }
 }

@@ -21,8 +21,22 @@ export const routes: Route[] = [
       {
         path: 'about-us',
         loadComponent: () =>
-          import('./website/pages/aboutus/about-us.component').then(
-            (mod) => mod.AboutUsComponents
+          import('./website/pages/aboutus/about-us-screen.component').then(
+            (mod) => mod.AboutUsScreenComponents
+          ),
+      },
+      {
+        path: 'contact-us',
+        loadComponent: () =>
+          import('./website/pages/contactusscreen/contact-us-screen.component').then(
+            (mod) => mod.ContactUsScreenComponent
+          ),
+      },
+      {
+        path: 'service-home',
+        loadComponent: () =>
+          import('./website/pages/service-pages/service-page.component').then(
+            (mod) => mod.ServicePageComponent
           ),
       },
     ],

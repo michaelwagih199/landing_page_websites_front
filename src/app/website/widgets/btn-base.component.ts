@@ -18,8 +18,8 @@ import { CommonModule } from '@angular/common';
 export class ButtonComponents {
   @Input({ required: true })
   btnTitle: string = 'Order Now';
-  @Input({ required: true })
-  btnStyle: string = '';
+  @Input()
+  btnStyle: string = 'bg-blue_primary-dark_1 text-lg hover:bg-blue_primary-hover active:text-blue_primary-light text-white font-semibold py-2 w-36 px-3 rounded-full transition-colors duration-200';
   @Output()
   btnClick = new EventEmitter();
 }

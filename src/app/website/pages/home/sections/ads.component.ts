@@ -6,9 +6,9 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <section class="mt-8">
-      <div class="container">
-        <img class="w-full" src="/assets/images/ads.png"  alt="" srcset="" />
+    <section class="my-12 md:my-24">
+      <div class="container mx-4">
+        <img class="w-full" src="/assets/images/offer.png"  alt="" srcset="" />
       </div>
     </section>
   `,

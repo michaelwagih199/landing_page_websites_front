@@ -9,13 +9,14 @@ module.exports = {
           light: "#3488C6",
           extraLight: "#CEE2F1",
           dark_1: "#4679BE",
-          dark_2: "#184465",
+          dark_2: "#152439",
           dark_3: "#003861",
           hover: "#82B3F4",
         },
         natural: {
           black: "#0A1B28",
-          while: "#F5F7F3",
+          white: "#F7F7F7",
+
           blueWhite: "#F0FAFF",
           customGray: "#80909C",
           customGrayLight: "#F8F9FC",
