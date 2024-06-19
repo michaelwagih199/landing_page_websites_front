@@ -4,111 +4,51 @@ import {
   Input,
   OnChanges,
   SimpleChanges,
-  inject
+  inject,
 } from '@angular/core';
 import { ButtonComponents } from '../../../widgets/btn-base.component';
 
 import { Hero } from 'src/app/website/models/home-model';
 import { STYLES } from '../../../../utils/constants';
+import { WidgetBaseCircularImage } from '../../../widgets/widget-base-circular-image.component';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
   template: `
-    <section class="hero bg-neutral-200">
-      <div
-        class="container flex flex-col-reverse py-4  justify-between items-center gap-3 text-center px-8 md:flex-row md:text-left md:py-0"
-      >
-        <svg
-          class="rotate-180 mr-8 hidden md:block"
-          xmlns="http://www.w3.org/2000/svg"
-          width="28"
-          height="28"
-          viewBox="0 0 28 28"
-          fill="none"
-        >
-          <rect
-            class="hover:fill-accent  cursor-pointer transition-colors duration-200"
-            width="28"
-            height="28"
-            fill="#00467E"
-            rx="2"
-          />
-          <path
-            d="M11 20L17 14L11 8"
-            stroke="white"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-
-        <div class="flex flex-col gap-4">
-          <h1 class="text-blue_primary-dark_4 text-2xl md:text-4xl">
-            {{hero?.header}}
-          </h1>
-          <p class="text-base text-natural-customGray md:text-xl">
-          {{ hero?.desc}}
-          </p>
-          <div class="flex justify-center gap-4 mt-2 md:mt-4  md:justify-start">
-            <app-button
-              [btnStyle]="btnWhite"
-              (btnClick)="onOrderClick()"
-              btnTitle="Order Now"
-            ></app-button>
-            <app-button
-              [btnStyle]="btnBlue"
-              (btnClick)="onOrderClick()"
-              btnTitle="Know More"
-            ></app-button>
-          </div>
-        </div>
-        <div class="w-1/2">
-          <img src="{{ hero?.heroImage }}" alt="" loading="lazy"/>
-        </div>
-        <svg
-          class="ml-8 hidden md:block"
-          xmlns="http://www.w3.org/2000/svg"
-          width="28"
-          height="28"
-          viewBox="0 0 28 28"
-          fill="none"
-        >
-          <rect
-            class="hover:fill-accent  cursor-pointer transition-colors duration-200"
-            width="28"
-            height="28"
-            fill="#00467E"
-            rx="2"
-          />
-          <path
-            d="M11 20L17 14L11 8"
-            stroke="white"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </div>
-    </section>
+<section class="mt-12 md:mt-24">
+  <div
+    class="container flex flex-col py-4 justify-between items-center gap-3 text-center px-8 md:flex-row md:text-left md:py-0">
+    <div class="flex flex-col gap-8 flex-1 w-96">
+      <h1 class="text-blue_primary-dark_1 text-3xl md:text-4xl">
+        {{ hero?.header }}
+      </h1>
+      <app-button (btnClick)="onOrderClick()" btnTitle="Order Now"></app-button>
+    </div>
+    <widget-base-circular-image class="flex-1 flex justify-center"
+      widgetImageClass="absolute w-[13.0125rem] h-[13.0125rem] rounded-full object-cover"
+      [widgetImage]="widgetImage"></widget-base-circular-image>
+  </div>
+</section>
   `,
   styleUrls: ['../_home-style.scss'],
-  imports: [CommonModule, ButtonComponents,NgOptimizedImage],
+  imports: [
+    CommonModule,
+    ButtonComponents,
+    NgOptimizedImage,
+    WidgetBaseCircularImage,
+  ],
 })
-export class HeroApp implements OnChanges{
+export class HeroApp {
+  @Input({ required: true }) hero: Hero | undefined;
 
-  @Input({ required: true }) hero: Hero |undefined;
-
+  widgetImage: any = '/assets/images/team1.png';
   ngOnInit(): void {
     //console.log('fff', this.hero);
   }
 
-  ngOnChanges(changes: SimpleChanges): void {
-}
-
   btnWhite = STYLES.btnWhite;
   btnBlue = STYLES.btnBlue;
-
 
   onOrderClick() { }
 }

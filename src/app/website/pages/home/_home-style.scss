@@ -14,11 +14,7 @@
     object-fit: cover;
     height: 29rem;
   }
-  &__char {
-    // position: absolute;
-    // top: 0;
-    // right: 6rem;
-  }
+
   &__cta {
     position: absolute;
     top: 0;
@@ -33,17 +29,17 @@
     content: "";
     height: 0.188rem;
     border-radius: 0.5rem;
-    background-color: #e29e21;
+    background-color: #fff;
   }
   &__footer {
     &::after {
-      width: 50%;
+      width: 2.49144rem;
       display: block;
       content: "";
       margin-top: 0.25rem;
-      height: 0.188rem;
+      height: 0.0625rem;
       border-radius: 0.5rem;
-      background-color: #e29e21;
+      background-color: #fff;
     }
   }
 }

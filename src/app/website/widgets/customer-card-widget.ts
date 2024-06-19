@@ -7,15 +7,15 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule],
   template: `
     <div
-      class="flex flex-col p-3 gap-2 h-auto w-80 border-2 rounded-2xl justify-center items-center"
+      class="flex flex-col p-3 gap-4 h-auto w-80 border border-blue_primary-dark_1 rounded-2xl justify-center items-center"
     >
       <img
         class="w-10 h-10 rounded-full"
         [src]="widgetAvatar"
         alt="Order Now"
       />
-      <p class="text-blue_primary-dark_4 text-xl">{{ widgetTitle }}</p>
-      <p class="text-natural-customGray text-base text-center">
+      <p class="text-blue_primary-dark_1 text-xl font-semibold">{{ widgetTitle }}</p>
+      <p class="text-blue_primary-dark_1 text-base text-center">
         {{ widgetDesc }}
       </p>
       <div class="flex gap-4">

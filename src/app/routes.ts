@@ -18,6 +18,27 @@ export const routes: Route[] = [
             (mod) => mod.HomeComponent
           ),
       },
+      {
+        path: 'about-us',
+        loadComponent: () =>
+          import('./website/pages/aboutus/about-us-screen.component').then(
+            (mod) => mod.AboutUsScreenComponents
+          ),
+      },
+      {
+        path: 'contact-us',
+        loadComponent: () =>
+          import('./website/pages/contactusscreen/contact-us-screen.component').then(
+            (mod) => mod.ContactUsScreenComponent
+          ),
+      },
+      {
+        path: 'service-home',
+        loadComponent: () =>
+          import('./website/pages/service-pages/service-page.component').then(
+            (mod) => mod.ServicePageComponent
+          ),
+      },
     ],
   },
 

@@ -10,28 +10,28 @@ import {
   WhyChooseUs
 } from '../../models/home-model';
 import { HomeService } from '../../service/home.service';
-import { AboutUs } from './sections/about-us.component';
+import { AboutUsHomeSection } from './sections/about-us.component';
 import { AddsComponent } from './sections/ads.component';
-import { FooterComponent } from './sections/footer.component';
+import { FooterComponent } from '../../layout/website-layout/components/footer.component';
 import { HeroApp } from './sections/hero.component';
 import { SectionService } from './sections/service-section.component';
 import { StayTunedSection } from './sections/stay-tuned.component';
 import { TestimonialSection } from './sections/testimonial.component';
 import { WhyChoseUsComponent } from './sections/why-chose-us.component';
+import { WidgetSocialIcon } from "../../layout/website-layout/components/widget-social-icon.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
   template: `
     <app-hero [hero]="hero"></app-hero>
-    <app-about-us [aboutUs]="aboutUs"></app-about-us>
-    <app-ads></app-ads>
+    <!-- <app-ads></app-ads> -->
     <home-section-service
-      serviceTitle="Popular services"
+    serviceTitle="Our Services"
     ></home-section-service>
-    <home-section-why-chose-us [whyChoseUs]="whyChooseUs"></home-section-why-chose-us>
-    <home-section-service serviceTitle="New services"></home-section-service>
+    <app-about-us-home-section [aboutUs]="aboutUs"></app-about-us-home-section>
     <app-ads></app-ads>
+    <home-section-why-chose-us [whyChoseUs]="whyChooseUs"></home-section-why-chose-us>
     <home-section-testimonial [testimonial]="testimonial"></home-section-testimonial>
     <home-section-stay-tuned [stayTone]="stayTuned"></home-section-stay-tuned>
     <app-ads></app-ads>
@@ -40,7 +40,7 @@ import { WhyChoseUsComponent } from './sections/why-chose-us.component';
   imports: [
     CommonModule,
     HeroApp,
-    AboutUs,
+    AboutUsHomeSection,
     AddsComponent,
     SectionService,
     WhyChoseUsComponent,
@@ -48,7 +48,8 @@ import { WhyChoseUsComponent } from './sections/why-chose-us.component';
     StayTunedSection,
     FooterComponent,
     SpinnerComponent,
-  ],
+    WidgetSocialIcon
+  ]
 })
 export class HomeComponent implements OnInit {
   private homeService = inject(HomeService);
@@ -66,13 +67,11 @@ export class HomeComponent implements OnInit {
     this.homeService.getHomeItem()
       .subscribe(data => {
         if (data.statusCode === 200) {
-          console.log('Home Data', data);
-
-          this.hero = data.data[0].home.hero
-          this.aboutUs = data.data[0].home.aboutUs
-          this.whyChooseUs = data.data[0].home.whyChooseUs
-          this.testimonial = data.data[0].home.testimonial
-          this.stayTuned = data.data[0].home.stayTuned
+          this.hero = data.data.home.hero
+          this.aboutUs = data.data.home.aboutUs
+          this.whyChooseUs = data.data.home.whyChooseUs
+          this.testimonial = data.data.home.testimonial
+          this.stayTuned = data.data.home.stayTuned
         }
         this.isLoading = false;
       });

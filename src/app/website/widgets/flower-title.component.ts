@@ -7,12 +7,13 @@ import { Component, Input } from '@angular/core';
   imports: [CommonModule],
   template: `
     <div class="flex gap-3 items-center">
-      <img src="/assets/images/flowerImg.png" alt="Flower" srcset="">
+      <img [ngClass]="flowerClass" src="/assets/images/flowerImg.png" alt="Flower" srcset="">
       <div [ngClass]="titleClass">{{ title }}</div>
     </div>
   `,
 })
 export class FlowerWidget {
-  @Input() title: string | undefined ;
-  @Input() titleClass: string = '';
+  @Input({ required: true }) title: string | undefined ;
+  @Input({ required: true }) titleClass: string = '';
+  @Input() flowerClass: string = '';
 }
