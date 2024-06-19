@@ -1,8 +1,4 @@
-import {
-  HttpInterceptorFn,
-  provideHttpClient,
-  withInterceptors
-} from '@angular/common/http';
+import { HttpInterceptorFn, provideHttpClient, withInterceptors } from '@angular/common/http';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { provideRouter } from '@angular/router';
 import { finalize } from 'rxjs';
