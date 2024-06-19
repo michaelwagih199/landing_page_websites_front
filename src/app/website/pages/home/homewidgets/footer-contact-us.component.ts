@@ -87,7 +87,7 @@ import { CommonModule } from '@angular/common';
             stroke-linejoin="round"
           />
         </svg>
-        <p>enlightyourskysales@gmail.com</p>
+        <p>enlightyourskysales&#64;gmail.com</p>
       </div>
 
     </div>
