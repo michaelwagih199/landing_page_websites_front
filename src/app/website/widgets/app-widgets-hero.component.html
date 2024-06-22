@@ -1,0 +1,14 @@
+<section class="h-hero-section bg-veryLightPink">
+  <div class="relative h-full text-white md:h-full">
+    <img class="absolute object-cover h-full bg-cover w-full" [src]="heroData.heroImage" loading="lazy" alt="">
+    <div class="absolute object-cover h-full bg-cover w-full bg-black opacity-25">
+    </div>
+    <div class="absolute flex justify-center items-center h-full w-full">
+      <div class="flex flex-col justify-center text-center items-center gap-6 w-[794px] ">
+        <p class="text-[2.5rem]/[53.32px] font-title font-bold md:text-5xl">{{heroData.header}}</p>
+        <p class="text-xl  font-medium md:text-xl">{{heroData.desc}}</p>
+        <app-button class="mt-3" (btnClick)="onOrderClick()" btnTitle="Order Now"></app-button>
+      </div>
+    </div>
+  </div>
+</section>

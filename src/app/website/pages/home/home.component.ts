@@ -1,54 +1,39 @@
-import { CommonModule } from '@angular/common';
 import { Component, OnInit, inject } from '@angular/core';
-import { SpinnerComponent } from '../../../spinner.component';
 import {
   AboutUsModel,
   FooterAndPublicInfo,
   Hero,
+  HomeDataLake,
+  Makespecialevents,
+  ServicesAndEvents,
   StayTuned,
-  Testimonial,
   WhyChooseUs
 } from '../../models/home-model';
-import { HomeService } from '../../service/home.service';
-import { AboutUsHomeSection } from './sections/about-us.component';
-import { AddsComponent } from './sections/ads.component';
-import { FooterComponent } from '../../layout/website-layout/components/footer.component';
-import { HeroApp } from './sections/hero.component';
-import { SectionService } from './sections/service-section.component';
-import { StayTunedSection } from './sections/stay-tuned.component';
-import { TestimonialSection } from './sections/testimonial.component';
-import { WhyChoseUsComponent } from './sections/why-chose-us.component';
-import { WidgetSocialIcon } from "../../layout/website-layout/components/widget-social-icon.component";
+import { HomeService } from '../../service/app.service';
+import { AppWidgetsHeroComponent } from '../../widgets/app-widgets-hero.component';
+import { HomeMakeSpecialEventsComponent } from "./sections/home-make-special-events.component";
+import { HomeSectionsAboutUsComponent } from './sections/home-sections-about-us.component';
+import { HomeSectionsServiceEventsComponent } from './sections/home-sections-service-events.component';
+import { HomeSectionsWhyChooseUsComponent } from './sections/home-sections-why-choose-us.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   template: `
-    <app-hero [hero]="hero"></app-hero>
-    <!-- <app-ads></app-ads> -->
-    <home-section-service
-    serviceTitle="Our Services"
-    ></home-section-service>
-    <app-about-us-home-section [aboutUs]="aboutUs"></app-about-us-home-section>
-    <app-ads></app-ads>
-    <home-section-why-chose-us [whyChoseUs]="whyChooseUs"></home-section-why-chose-us>
-    <home-section-testimonial [testimonial]="testimonial"></home-section-testimonial>
-    <home-section-stay-tuned [stayTone]="stayTuned"></home-section-stay-tuned>
-    <app-ads></app-ads>
-    <app-spinner [isLoading]="isLoading"></app-spinner>
+    <section>
+      <app-widgets-hero [heroData]="hero"></app-widgets-hero>
+      <home-sections-about-us [aboutUsData]="aboutUs"></home-sections-about-us>
+      <home-sections-service-events [servicesAndEvents]="servicesAndEvents"></home-sections-service-events>
+      <home-sections-why-choose-us [whyChooseUs]="whyChooseUs"></home-sections-why-choose-us>
+      <home-make-special-events [makeSpecialEvents]="makeSpecialEvents"></home-make-special-events>
+    </section>
   `,
   imports: [
-    CommonModule,
-    HeroApp,
-    AboutUsHomeSection,
-    AddsComponent,
-    SectionService,
-    WhyChoseUsComponent,
-    TestimonialSection,
-    StayTunedSection,
-    FooterComponent,
-    SpinnerComponent,
-    WidgetSocialIcon
+    AppWidgetsHeroComponent,
+    HomeSectionsAboutUsComponent,
+    HomeSectionsWhyChooseUsComponent,
+    HomeSectionsServiceEventsComponent,
+    HomeMakeSpecialEventsComponent
   ]
 })
 export class HomeComponent implements OnInit {
@@ -58,22 +43,18 @@ export class HomeComponent implements OnInit {
   hero!: Hero;
   aboutUs!: AboutUsModel;
   whyChooseUs!: WhyChooseUs;
-  testimonial!: Testimonial;
-  stayTuned!: StayTuned;
+  makeSpecialEvents!: Makespecialevents;
+  servicesAndEvents!: ServicesAndEvents;
   footerAndPublicInfo!: FooterAndPublicInfo;
 
   ngOnInit(): void {
     this.isLoading = true;
-    this.homeService.getHomeItem()
-      .subscribe(data => {
-        if (data.statusCode === 200) {
-          this.hero = data.data.home.hero
-          this.aboutUs = data.data.home.aboutUs
-          this.whyChooseUs = data.data.home.whyChooseUs
-          this.testimonial = data.data.home.testimonial
-          this.stayTuned = data.data.home.stayTuned
-        }
-        this.isLoading = false;
-      });
+    const datalake: HomeDataLake = this.homeService.getHomeItem();
+    this.hero = datalake.home.hero;
+    this.aboutUs = datalake.home.aboutUs;
+    this.whyChooseUs = datalake.home.whyChooseUs;
+    this.makeSpecialEvents = datalake.home.makeSpecialEvents;
+    this.servicesAndEvents = datalake.home.servicesAndEvents;
+
   }
 }

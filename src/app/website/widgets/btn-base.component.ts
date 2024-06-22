@@ -6,20 +6,20 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
+  <!-- <p class="bg-gradient-to-r from-btnGradient-orange1 to-btnGradient-orange2 hover:from-btnGradient-orangeHover1 hover:to-btnGradient-orangeHover2 text-lg active:text-veryLightPink text-white font-bold px-8 py-3 w-btn-width rounded-full transition-colors duration-200 shadow-md text-center mb-3 ">Order Now</p> -->
     <button
       (click)="btnClick.emit()"
-      [ngClass]="btnStyle"
-    >
+      [ngClass]="btnStyle">
       {{ btnTitle }}
     </button>
   `,
-  styleUrls: ['./widget-style.scss'],
+  styleUrls: ['_styles.scss'],
 })
 export class ButtonComponents {
   @Input({ required: true })
   btnTitle: string = 'Order Now';
   @Input()
-  btnStyle: string = 'bg-blue_primary-dark_1 text-lg hover:bg-blue_primary-hover active:text-blue_primary-light text-white font-semibold py-2 w-36 px-3 rounded-full transition-colors duration-200';
+  btnStyle: string = 'bg-gradient-to-r from-btnGradient-orange1 to-btnGradient-orange2 hover:from-btnGradient-orangeHover1 hover:to-btnGradient-orangeHover2 text-lg active:text-veryLightPink text-white font-bold px-8 py-3 w-btn-width rounded-full transition-colors duration-200 shadow-md';
   @Output()
   btnClick = new EventEmitter();
 }

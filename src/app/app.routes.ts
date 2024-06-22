@@ -1,0 +1,44 @@
+import { Routes } from '@angular/router';
+import { WebsiteLayoutComponent } from './website/layout/website-layout/website-layout.component';
+
+export const routes: Routes = [
+  {
+    path: '',
+    component: WebsiteLayoutComponent,
+    providers: [
+      // AdminService,
+      // {provide: ADMIN_API_KEY, useValue: 12345},
+    ],
+    children: [
+      {
+        path: '',
+        loadComponent: () =>
+          import('./website/pages/home/home.component').then(
+            (mod) => mod.HomeComponent
+          ),
+      },
+      {
+        path: 'about-us',
+        loadComponent: () =>
+          import('./website/pages/aboutus/about-us-screen.component').then(
+            (mod) => mod.AppScreenAboutUs
+          ),
+      },
+      {
+        path: 'catering',
+        loadComponent: () =>
+          import('./website/pages/catering/catring-screen.component').then(
+            (mod) => mod.AppScreenCatering
+          ),
+      },
+      {
+        path: 'events',
+        loadComponent: () =>
+          import('./website/pages/events/events.component').then(
+            (mod) => mod.AppScreenEvents
+          ),
+      },
+    ],
+  },
+
+];

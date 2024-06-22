@@ -6,9 +6,9 @@ export interface Home {
   hero: Hero
   aboutUs: AboutUsModel
   whyChooseUs: WhyChooseUs
-  testimonial: Testimonial
-  stayTuned: StayTuned
-  footerAndPublicInfo: FooterAndPublicInfo
+  makeSpecialEvents: Makespecialevents
+  footerAndPublicInfo: FooterAndPublicInfo,
+  servicesAndEvents: ServicesAndEvents
 }
 
 export interface Hero {
@@ -24,18 +24,27 @@ export interface AboutUsModel {
 }
 
 export interface WhyChooseUs {
-  title: string
+  image: string
+  header: string
+  desc: string
+}
+
+export interface ServicesAndEvents {
+  header: string,
+  titleEvent: string,
   cards: Card[]
 }
 
 export interface Card {
   title: string
-  desc: string
+  desc: string,
+  cardCover:string
 }
 
-export interface Testimonial {
-  title: string
-  cards: Card2[]
+export interface Makespecialevents {
+  image: string
+  header: string
+  desc: string
 }
 
 export interface Card2 {
@@ -58,7 +67,7 @@ export interface FooterAndPublicInfo {
   contacts: Contacts
 }
 
-export interface FeaturesIcon {}
+export interface FeaturesIcon { }
 
 export interface Contacts {
   address: Address
@@ -66,9 +75,9 @@ export interface Contacts {
   phones: Phones
 }
 
-export interface Address {}
+export interface Address { }
 
-export interface Email {}
+export interface Email { }
 
 export interface Phones {
   info: string[]
