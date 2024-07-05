@@ -8,7 +8,8 @@ export interface Home {
   whyChooseUs: WhyChooseUs
   makeSpecialEvents: Makespecialevents
   footerAndPublicInfo: FooterAndPublicInfo,
-  servicesAndEvents: ServicesAndEvents
+  servicesAndEvents: ServicesAndEvents,
+  ourTeam: OurTeam
 }
 
 export interface Hero {
@@ -35,6 +36,11 @@ export interface ServicesAndEvents {
   cards: Card[]
 }
 
+export interface OurTeam {
+  header: string,
+  cards: Card[]
+}
+
 export interface Card {
   title: string
   desc: string,
@@ -47,18 +53,6 @@ export interface Makespecialevents {
   desc: string
 }
 
-export interface Card2 {
-  icon: string
-  title: string
-  desc: string
-  rate: number
-}
-
-export interface StayTuned {
-  title: string
-  desc: string
-  images: string[]
-}
 
 export interface FooterAndPublicInfo {
   desc: string

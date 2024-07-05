@@ -9,7 +9,7 @@ import { FooterComponent } from './components/footer.component';
   template: `
     <div class="layout">
       <responsive-nav></responsive-nav>
-      <footer-component class="footer"></footer-component>
+      <footer-component ></footer-component>
     </div>
   `,
   styleUrls: ['../_layout.scss'],

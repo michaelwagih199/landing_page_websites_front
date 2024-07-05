@@ -1,1 +1,13 @@
-<h1 class="h-24 bg-maize">Catering Screen</h1>
+<section>
+  <app-widgets-hero [heroData]="hero"></app-widgets-hero>
+  <div class="container py-4 mt-8">
+    <h1 class="text-[2.5rem]/[53.32px] font-bold text-dark font-title text-center ">Our Events</h1>
+
+    <div style="width: 500px; height: 200px; margin: 0 auto">
+      <app-widget-image-slider [slides]="slides"></app-widget-image-slider>
+    </div>
+
+  </div>
+  <app-widgets-event-form></app-widgets-event-form>
+
+</section>

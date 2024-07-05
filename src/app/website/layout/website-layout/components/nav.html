@@ -1,0 +1,55 @@
+<nav class="sticky top-0 z-10 bg-white flex flex-wrap items-center justify-between h-28 shadow-lg">
+  <div class="w-4/5 mx-auto flex flex-wrap items-center justify-between ">
+    <div class="w-full relative flex justify-between lg:w-auto  lg:static lg:block lg:justify-start">
+      <div>
+        <a href="/">
+          <img class="w-28 h-auto" src="/assets/images/logo.png" alt="logo" loading="lazy" />
+        </a>
+      </div>
+
+      <button
+        class="text-blue_primary-dark_1 cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden md:hidden outline-none focus:outline-none"
+        type="button" (click)="toggleNavbar()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </div>
+    <div [ngClass]="{ hidden: !showMenu, flex: showMenu }"
+      class="absolute right-0 top-20 z-10 flex h-screen font-semibold p-3 md:flex md:flex-grow md:justify-end md:static md:h-auto">
+      <div class="flex flex-col justify-between">
+        <ul
+          class="flex flex-col gap-3 list-none  text-mediumGrey lg:flex-row md:flex-row lg:gap-12 lg:ml-auto md:hover:dark ">
+          <li>
+            <a class="group hover:text-dark active:text-dark transition-colors duration-200 " routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home
+              <span class="block mt-1 max-w-0 group-hover:max-w-full transition-all duration-500  h-custom-line bg-orange"></span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/about-us" routerLinkActive="active"
+              class="group hover:text-dark active:text-dark transition-colors duration-200 ">About
+              <span class="block mt-1 max-w-0 group-hover:max-w-full transition-all duration-500 h-custom-line bg-orange"></span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/catering" routerLinkActive="active"
+              class="group hover:text-dark active:text-dark transition-colors duration-200 ">Catering
+              <span class="block mt-1 max-w-0 group-hover:max-w-full transition-all duration-500  h-custom-line bg-orange"></span>
+
+            </a>
+          </li>
+          <li>
+            <a routerLink="/events" routerLinkActive="active"
+              class="group hover:text-dark active:text-dark transition-colors duration-300" >Events
+              <span class="block mt-1 max-w-0 group-hover:max-w-full transition-all duration-500  h-custom-line bg-orange"></span>
+              </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+    <!-- phone -->
+  </div>
+</nav>
+<router-outlet></router-outlet>

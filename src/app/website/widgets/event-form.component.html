@@ -1,0 +1,50 @@
+<section class="h-[55.25rem] bg-bg-event-details mt-20">
+  <div class="container flex items-center justify-between ">
+    <div></div>
+    <div class="rounded-3xl bg-white w-[36.875rem] px-12 py-6 mt-16 shadow-xl flex flex-col gap-10">
+      <h1 class="font-title font-bold text-3xl">Your Event Details</h1>
+      <div class="flex flex-col gap-6">
+
+        <div class="flex flex-col gap-y-1">
+          <p>Name</p>
+          <input type="text" autocomplete="off"
+            class="bg-white text-mediumGrey text-sm font-medium rounded-lg border border-borderGray  focus:ring-formBorderGray block w-full p-2.5 placeholder-mediumGrey bg-opacity-90"
+            placeholder="Olivia Rhye" required>
+        </div>
+
+        <div class="flex flex-col gap-y-1">
+          <p>Email Address</p>
+          <input type="email" autocomplete="off"
+            class="bg-white text-mediumGrey text-sm font-medium rounded-lg border border-borderGray  focus:ring-formBorderGray block w-full p-2.5 placeholder-mediumGrey bg-opacity-90"
+            placeholder="olivia@gmail.com" required>
+        </div>
+
+        <div class="flex flex-col gap-y-1">
+          <p>Phone Number</p>
+          <input type="text" autocomplete="off"
+            class="bg-white text-mediumGrey text-sm font-medium rounded-lg border border-borderGray  focus:ring-formBorderGray block w-full p-2.5 placeholder-mediumGrey bg-opacity-90"
+            placeholder="01234567890" required>
+        </div>
+
+        <div class="flex flex-col gap-y-1">
+          <p>Event Type</p>
+          <select [(ngModel)]="selectedEventType" class="border border-borderGray bg-inherit h-10 px-2 rounded-md">
+            <option *ngFor="let item of eventTypeList" [value]="item">{{ item }}</option>
+          </select>
+        </div>
+
+        <div class="flex flex-col gap-y-1">
+          <p>Message</p>
+          <textarea
+            class="bg-white text-mediumGrey text-sm font-medium rounded-lg border border-borderGray  focus:ring-formBorderGray block w-full p-2.5 placeholder-mediumGrey bg-opacity-90"
+            placeholder="Message" cols="40" rows="3"></textarea>
+        </div>
+
+
+      </div>
+      <app-button
+        btnStyle="w-full bg-gradient-to-r from-btnGradient-orange1 to-btnGradient-orange2 hover:from-btnGradient-orangeHover1 hover:to-btnGradient-orangeHover2 text-lg active:text-veryLightPink text-white font-bold px-8 py-3 w-btn-width rounded-full transition-colors duration-200 shadow-md"
+        (btnClick)="onOrderClick()" btnTitle="Send"></app-button>
+    </div>
+  </div>
+</section>

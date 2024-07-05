@@ -1,14 +1,15 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ImageShadowEffectWidget } from '../../../widgets/image-effect.component';
 import { ComponentServiceCard } from '../../../widgets/service-card.component';
-import { ServicesAndEvents } from 'src/app/website/models/home-model';
+import { Card, ServicesAndEvents } from 'src/app/website/models/home-model';
 import { CommonModule } from '@angular/common';
+import { log } from 'console';
 
 @Component({
   selector: 'home-sections-service-events',
   template: `
     <section class="h-service-section py-16">
-      <div class="container flex flex-col gap-8">
+      <div class="container">
         <div class="flex justify-between items-center">
           <h1 class="w-2/5 text-[2.5rem]/[53.32px] font-title font-bold  ">
             {{servicesAndEvents.header}}
@@ -20,14 +21,14 @@ import { CommonModule } from '@angular/common';
           >
         </div>
 
-        <div class="flex justify-between gap-4">
-        @for (item of servicesAndEvents.cards ; track item) {
-          <component-service-card
-            [cardCover]="item.cardCover"
-            [cardDesc]="item.desc"
-            [cardTitle]="item.title"
-          ></component-service-card>
-        }
+        <div class="grid grid-cols-4 gap-y-40 gap-x-5">
+          @for (item of servicesAndEvents.cards.slice(0, 4) ; track item) {
+            <component-service-card
+              [cardCover]="item.cardCover"
+              [cardDesc]="item.desc"
+              [cardTitle]="item.title"
+            ></component-service-card>
+          }
       </div>
 
       </div>
@@ -39,7 +40,9 @@ import { CommonModule } from '@angular/common';
 export class HomeSectionsServiceEventsComponent {
   @Input({ required: true })
   servicesAndEvents!: ServicesAndEvents;
+
   onEventsClick() {
+
   }
 
 }

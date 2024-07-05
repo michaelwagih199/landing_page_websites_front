@@ -37,29 +37,61 @@ export class HomeService {
             {
               title: 'Birthdays',
               desc: 'Celebrate your special day with our tailored birthday catering.',
-              cardCover:"/assets/images/serviceCardBirthday.jpeg"
+              cardCover: '/assets/images/serviceCardBirthday.jpeg',
             },
             {
               title: 'Weddings',
               desc: 'Make your wedding unforgettable with our elegant catering.',
-              cardCover:"/assets/images/serviceCardWedding.jpeg"
-
+              cardCover: '/assets/images/serviceCardWedding.jpeg',
             },
             {
               title: 'Special Events',
               desc: 'Elevate any occasion with our gourmet catering crafted for your unique event.',
-              cardCover:"/assets/images/serviceCardsSpecialEvents.jpeg"
-
+              cardCover: '/assets/images/serviceCardsSpecialEvents.jpeg',
             },
             {
               title: 'New Year’s Eve',
               desc: 'Ring in the New Year with a lavish feast curated by our expert chefs.',
-              cardCover:"/assets/images/serviceCardnewYear.jpeg"
-
+              cardCover: '/assets/images/serviceCardnewYear.jpeg',
+            },
+            {
+              title: 'Fit & Fun Fair',
+              desc: '',
+              cardCover: '/assets/images/serviceCard2.jpeg',
+            },
+            {
+              title: 'Brew & BBQ Bash',
+              desc: '',
+              cardCover: '/assets/images/serviceCard5.jpeg',
             },
           ],
           header: 'We also offer unique services for your events',
           titleEvent: 'View All',
+        },
+        ourTeam: {
+          cards: [
+            {
+              title: 'John Bennett',
+              desc: 'Pastry Chef',
+              cardCover: '/assets/images/team1.jpeg',
+            },
+            {
+              title: 'Daniel Smith',
+              desc: 'Line Cook',
+              cardCover: '/assets/images/team2.jpeg',
+            },
+            {
+              title: 'Emily Johnson',
+              desc: 'Prep Cook',
+              cardCover: '/assets/images/team3.jpeg',
+            },
+            {
+              title: 'James Wilson',
+              desc: 'Line Cook',
+              cardCover: '/assets/images/team4.jpeg',
+            }
+          ],
+          header: 'We also offer unique services for your events',
         },
         footerAndPublicInfo: {
           contacts: { address: '', email: '', phones: { info: [] } },

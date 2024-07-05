@@ -6,7 +6,6 @@ import {
   HomeDataLake,
   Makespecialevents,
   ServicesAndEvents,
-  StayTuned,
   WhyChooseUs
 } from '../../models/home-model';
 import { HomeService } from '../../service/app.service';
