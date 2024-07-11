@@ -12,6 +12,7 @@ module.exports = {
         coralPink: "#EB5757",
         darkGrey: "#3C3C3C",
         veryLightPink: "#FFF7ED",
+        veryLightPink2: "#FFEDD5",
         paleGray: "#F9FAFB",
         borderGray: "#667085",
         formBorderGray:"#344054",

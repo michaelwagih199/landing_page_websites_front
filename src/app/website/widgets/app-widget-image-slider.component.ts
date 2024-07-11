@@ -1,18 +1,28 @@
-import { Component, Inject, Input, OnDestroy, OnInit, PLATFORM_ID } from '@angular/core';
+import { Component, EventEmitter, Inject, Input, OnDestroy, OnInit, Output, PLATFORM_ID } from '@angular/core';
 import { SlideInterface } from '../models/slide.interface';
-import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { CommonModule, isPlatformBrowser, ViewportScroller } from '@angular/common';
+import { animate, state, style, transition, trigger } from '@angular/animations';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { ButtonComponents } from "./btn-base.component";
 
 @Component({
   selector: 'app-widget-image-slider',
   templateUrl: 'app-widget-image-slider.component.html',
   styleUrls: ['_styles.scss'],
-  standalone:true,
-  imports:[CommonModule]
+  standalone: true,
+  imports: [CommonModule, ButtonComponents]
 })
 
-export class AppWidgetImageSlider implements OnInit,OnDestroy {
+export class AppWidgetImageSlider implements OnInit, OnDestroy {
   @Input() slides: SlideInterface[] = [];
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+
+  @Output()
+  btnOrderClick = new EventEmitter();
+
+  @Output()
+  btnExploreClick = new EventEmitter();
+
+  constructor(@Inject(PLATFORM_ID) private platformId: Object, private scroller: ViewportScroller) { }
 
   currentIndex: number = 0;
   timeoutId?: number;
@@ -31,12 +41,11 @@ export class AppWidgetImageSlider implements OnInit,OnDestroy {
       if (this.timeoutId) {
         window.clearTimeout(this.timeoutId);
       }
-      this.timeoutId = window.setTimeout(() => this.goToNext(), 2000);
+      // 10000ms
+      this.timeoutId = window.setTimeout(() => this.goToNext(), 5000);
     } else {
       // Handle server-side or non-browser execution (optional)
     }
-
-
   }
 
   goToPrevious(): void {
@@ -57,12 +66,25 @@ export class AppWidgetImageSlider implements OnInit,OnDestroy {
     this.currentIndex = newIndex;
   }
 
+  scrollToBottom() {
+    window.scrollTo(0, document.body.scrollHeight);
+  }
+
+
   goToSlide(slideIndex: number): void {
     this.resetTimer();
     this.currentIndex = slideIndex;
   }
 
-  getCurrentSlideUrl() {
-    return `url('${this.slides[this.currentIndex].url}')`;
+  getCurrentSlide() {
+    return {
+      "url": this.slides[this.currentIndex].url,
+      "title": this.slides[this.currentIndex].title,
+      "desc": this.slides[this.currentIndex].desc
+    }
+  }
+
+  onOrderClick() {
+
   }
 }

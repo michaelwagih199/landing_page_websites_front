@@ -1,45 +1,19 @@
-.slide {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  background-size: cover;
-  background-position: center;
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn ease-in-out 100ms 1 forwards; /* Adjust duration and timing function */
 }
 
-.rightArrow {
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
-  right: 32px;
-  font-size: 45px;
-  color: #fff;
-  z-index: 1;
-  cursor: pointer;
+.fade-out {
+  animation: fadeOut ease-in-out 300ms; /* Adjust duration and timing function */
 }
 
-.leftArrow {
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
-  left: 32px;
-  font-size: 45px;
-  color: #fff;
-  z-index: 1;
-  cursor: pointer;
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-.slider {
-  position: relative;
-  height: 100%;
-}
-
-.dotsContainer {
-  display: flex;
-  justify-content: center;
-}
-
-.dot {
-  margin: 0 3px;
-  cursor: pointer;
-  font-size: 20px;
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
 }

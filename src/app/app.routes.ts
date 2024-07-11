@@ -26,10 +26,22 @@ export const routes: Routes = [
       },
       {
         path: 'catering',
-        loadComponent: () =>
-          import('./website/pages/catering/catring-screen.component').then(
-            (mod) => mod.AppScreenCatering
-          ),
+        children: [
+          {
+            path: '',
+            loadComponent: () =>
+              import('./website/pages/catering/catring-screen.component').then(
+                (mod) => mod.AppScreenCatering
+              ),
+          },
+          {
+            path: 'menu',
+            loadComponent: () =>
+              import('./website/pages/catering/menus/menue-screen.component').then(
+                (mod) => mod.MenuComponent
+              ),
+          }
+        ],
       },
       {
         path: 'events',

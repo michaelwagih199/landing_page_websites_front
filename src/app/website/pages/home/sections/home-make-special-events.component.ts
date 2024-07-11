@@ -14,7 +14,7 @@ import { ButtonComponents } from "../../../widgets/btn-base.component";
                 <app-button class="mt-3" (btnClick)="onEventsClick()" btnTitle="Learn More"></app-button>
               </div>
               <div class="w-2/5 flex justify-end">
-                <img class="object-contain w-96 h-96 transition duration-300 ease-in-out hover:scale-105" [src]="makeSpecialEvents.image" loading="lazy" alt="">
+                <img class="object-contain w-96 h-96" [src]="makeSpecialEvents.image" loading="lazy" alt="">
               </div>
             </div>
           </div>

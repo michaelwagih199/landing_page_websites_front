@@ -9,6 +9,7 @@ export interface Home {
   makeSpecialEvents: Makespecialevents
   footerAndPublicInfo: FooterAndPublicInfo,
   servicesAndEvents: ServicesAndEvents,
+  menus: ServicesAndEvents,
   ourTeam: OurTeam
 }
 

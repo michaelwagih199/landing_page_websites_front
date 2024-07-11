@@ -1,6 +1,6 @@
-<section>
+<section >
   <app-widgets-hero [heroData]="hero"></app-widgets-hero>
-  <div class="container py-4 mt-8">
+  <div class="container py-20 mt-8">
     <h1 class="text-[2.5rem]/[53.32px] font-bold text-dark font-title text-center ">Our Events</h1>
     <div class="grid grid-cols-4 gap-y-40 gap-x-5 mt-8">
       @for (item of servicesAndEvents.cards ; track item) {
@@ -12,5 +12,7 @@
       }
     </div>
   </div>
-  <app-widgets-event-form></app-widgets-event-form>
+  <div class="mt-20">
+    <app-widgets-event-form></app-widgets-event-form>
+  </div>
 </section>

@@ -21,7 +21,7 @@ import { log } from 'console';
           >
         </div>
 
-        <div class="grid grid-cols-4 gap-y-40 gap-x-5">
+        <div class="grid grid-cols-4 gap-y-40 gap-x-5 mt-8">
           @for (item of servicesAndEvents.cards.slice(0, 4) ; track item) {
             <component-service-card
               [cardCover]="item.cardCover"
