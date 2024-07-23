@@ -21,7 +21,7 @@ export class MenuComponent implements OnInit {
   isLoading: boolean = false;
   hero!: Hero;
   menus!: ServicesAndEvents;
-  eventTypeList = ['Wedding Event', 'Special Event', 'New Year Event']
+  eventTypeList = ['Wedding', 'Catering', 'New Year Event']
   selectedEventType = 'Make a Magical Event';
 
   ngOnInit() {
