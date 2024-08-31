@@ -1,19 +1,17 @@
+import { CommonModule, isPlatformBrowser, ViewportScroller } from '@angular/common';
 import { Component, EventEmitter, Inject, Input, OnDestroy, OnInit, Output, PLATFORM_ID } from '@angular/core';
 import { SlideInterface } from '../models/slide.interface';
-import { CommonModule, isPlatformBrowser, ViewportScroller } from '@angular/common';
-import { animate, state, style, transition, trigger } from '@angular/animations';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { ButtonComponents } from "./btn-base.component";
 
 @Component({
-  selector: 'app-widget-image-slider',
-  templateUrl: 'app-widget-image-slider.component.html',
+  selector: 'app-widget-base-image-slider',
+  templateUrl: 'app-widget-base-image-slider.component.html',
   styleUrls: ['_styles.scss'],
   standalone: true,
   imports: [CommonModule, ButtonComponents]
 })
 
-export class AppWidgetImageSlider implements OnInit, OnDestroy {
+export class AppWidgetBaseImageSlider implements OnInit, OnDestroy {
   @Input() slides: SlideInterface[] = [];
 
   @Output()
@@ -41,7 +39,6 @@ export class AppWidgetImageSlider implements OnInit, OnDestroy {
       if (this.timeoutId) {
         window.clearTimeout(this.timeoutId);
       }
-      // 10000ms
       this.timeoutId = window.setTimeout(() => this.goToNext(), 5000);
     } else {
       // Handle server-side or non-browser execution (optional)

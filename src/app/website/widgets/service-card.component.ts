@@ -14,10 +14,10 @@ import { ImageShadowEffectWidget } from "./image-effect.component";
     <p class="font-medium text-2xl ">{{ cardTitle }}</p>
     <p>{{ cardDesc }}</p>
     <div class="flex gap-2  items-center">
-      <a class="text-xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-btnGradient-orange1 to-btnGradient-orange2 hover:from-btnGradient-orangeHover1 hover:to-btnGradient-orangeHover2"
-        href="#">Explore
-      </a>
-      <span class="cursor-pointer">
+      <span (click)="btnClick.emit()" class="text-xl cursor-pointer font-medium text-transparent bg-clip-text bg-gradient-to-r from-btnGradient-orange1 to-btnGradient-orange2 hover:from-btnGradient-orangeHover1 hover:to-btnGradient-orangeHover2"
+        >Explore
+      </span>
+      <span class="cursor-pointer" (click)="btnClick.emit()">
       <img src = "/assets/images/icons/arrow-right.svg" alt="arrow-right"/>
       </span>
     </div>

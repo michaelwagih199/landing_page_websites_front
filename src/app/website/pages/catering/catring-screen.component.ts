@@ -1,18 +1,18 @@
-import { AfterViewInit, Component, DoCheck, OnChanges, OnInit, SimpleChanges, inject } from '@angular/core';
+import { ViewportScroller } from '@angular/common';
+import { Component, OnInit, inject } from '@angular/core';
+import { Router } from '@angular/router';
 import { Hero, HomeDataLake, ServicesAndEvents } from '../../models/home-model';
 import { SlideInterface } from '../../models/slide.interface';
 import { HomeService } from '../../service/app.service';
-import { AppWidgetImageSlider } from "../../widgets/app-widget-image-slider.component";
+import { AppWidgetCateringImageSlider } from "../../widgets/app-widget-catering-image-slider.component";
 import { AppWidgetsHeroComponent } from "../../widgets/app-widgets-hero.component";
 import { EventFormTeamCard } from "../../widgets/event-form.component";
-import { ViewportScroller } from '@angular/common';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-screens.catering',
   templateUrl: 'catering.component.html',
   standalone: true,
-  imports: [AppWidgetsHeroComponent, EventFormTeamCard, AppWidgetImageSlider]
+  imports: [AppWidgetsHeroComponent, EventFormTeamCard, AppWidgetCateringImageSlider]
 })
 
 export class AppScreenCatering implements OnInit {
