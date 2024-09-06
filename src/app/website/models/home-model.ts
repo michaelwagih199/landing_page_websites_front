@@ -43,9 +43,10 @@ export interface OurTeam {
 }
 
 export interface Card {
+  id: string
   title: string
   desc: string,
-  cardCover:string
+  cardCover: string
 }
 
 export interface Makespecialevents {

@@ -9,7 +9,7 @@ import { AppWidgetsHeroComponent } from "../../widgets/app-widgets-hero.componen
 import { EventFormTeamCard } from "../../widgets/event-form.component";
 
 @Component({
-  selector: 'app-screens.catering',
+  selector: 'app-screens-catering',
   templateUrl: 'catering.component.html',
   standalone: true,
   imports: [AppWidgetsHeroComponent, EventFormTeamCard, AppWidgetCateringImageSlider]

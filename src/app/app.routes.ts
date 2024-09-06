@@ -45,10 +45,22 @@ export const routes: Routes = [
       },
       {
         path: 'events',
-        loadComponent: () =>
-          import('./website/pages/events/events.component').then(
-            (mod) => mod.AppScreenEvents
-          ),
+        children: [
+          {
+            path: '',
+            loadComponent: () =>
+              import('./website/pages/events/events.component').then(
+                (mod) => mod.AppScreenEvents
+              ),
+          },
+          {
+            path: 'details',
+            loadComponent: () =>
+              import('./website/pages/events/events-details/events-details.component').then(
+                (mod) => mod.EventsDetailsComponents
+              ),
+          }
+        ]
       },
     ],
   },

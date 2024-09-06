@@ -1,5 +1,5 @@
-## docker build -t enlight-front-app:v1.0.0 -f ./Dockerfile .
+## docker build -t angular_ssr_docker .
 
-## docker run -p 8000:80 -d enlight-front-app:v1.0.0
+## docker run -p 4000:4000 angular_ssr_docker
 
-[I'm an ENLIGHT APPLICATION ](localhost:8000)
+[I'm an Web APPLICATION ](localhost:4000)

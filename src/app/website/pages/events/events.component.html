@@ -5,7 +5,7 @@
     <div class="grid grid-cols-4 gap-y-40 gap-x-5 mt-8">
       @for (item of servicesAndEvents.cards ; track item) {
       <component-service-card [cardCover]="item.cardCover" [cardDesc]="item.desc" [cardTitle]="item.title"
-        (btnClick)="oExploreClick()"></component-service-card>
+        (btnClick)="oExploreClick(item)"></component-service-card>
       }
     </div>
   </div>

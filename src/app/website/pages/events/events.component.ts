@@ -1,10 +1,11 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { AppWidgetsHeroComponent } from "../../widgets/app-widgets-hero.component";
 import { HomeService } from '../../service/app.service';
-import { Hero, AboutUsModel, WhyChooseUs, Makespecialevents, ServicesAndEvents, FooterAndPublicInfo, OurTeam, HomeDataLake } from '../../models/home-model';
+import { Hero, ServicesAndEvents, HomeDataLake, Card } from '../../models/home-model';
 import { ComponentServiceCard } from "../../widgets/service-card.component";
 import { EventFormTeamCard } from "../../widgets/event-form.component";
-import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-screen-events',
@@ -17,6 +18,7 @@ export class AppScreenEvents implements OnInit {
 
   private homeService = inject(HomeService);
   readonly dialog = inject(MatDialog);
+  private router = inject(Router);
 
   isLoading: boolean = false;
   hero!: Hero;
@@ -29,8 +31,9 @@ export class AppScreenEvents implements OnInit {
     this.servicesAndEvents = datalake.home.servicesAndEvents;
   }
 
-  oExploreClick() {
-
+  oExploreClick(item: Card) {
+    console.log(item);
+    this.router.navigate(['events/details']);
   }
 
 }
