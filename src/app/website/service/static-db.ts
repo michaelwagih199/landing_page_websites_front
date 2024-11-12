@@ -93,24 +93,49 @@ export const HOME_DATA: HomeDataLake = {
           title: 'Birthdays',
           desc: 'Celebrate your special day with our tailored birthday catering.',
           cardCover: '/assets/images/serviceCardBirthday.jpeg',
+          details: {
+            imagesList: [
+              '/assets/images/team1.jpeg',
+              '/assets/images/serviceCardBirthday.jpeg',
+              '/assets/images/serviceCardnewYear.jpeg',
+              '/assets/images/serviceCard5.jpeg',
+              '/assets/images/serviceCardsSpecialEvents.jpeg',
+              '/assets/images/serviceCardsSpecialEvents.jpeg',
+              '/assets/images/serviceCardWedding.jpeg'
+
+            ],
+            videosList: []
+          }
         },
         {
           id: '03cd3a82-e019-4d17-bdd4-8b1e8606abd6',
           title: 'Weddings',
           desc: 'Make your wedding unforgettable with our elegant catering.',
           cardCover: '/assets/images/serviceCardWedding.jpeg',
+          details: {
+            imagesList: [],
+            videosList: []
+          }
         },
         {
           id: '4801a02d-564c-4597-9b1e-658c0a4d86a4',
           title: 'Special Events',
           desc: 'Elevate any occasion with our gourmet catering crafted for your unique event.',
           cardCover: '/assets/images/serviceCardsSpecialEvents.jpeg',
+          details: {
+            imagesList: [],
+            videosList: []
+          }
         },
         {
           id: '4801a02d-564c-4597-9b1e-658c0a4d86a4',
           title: 'New Year’s Eve',
           desc: 'Ring in the New Year with a lavish feast curated by our expert chefs.',
           cardCover: '/assets/images/serviceCardnewYear.jpeg',
+          details: {
+            imagesList: [],
+            videosList: []
+          }
         },
       ],
       header: 'We also offer unique services for your events',

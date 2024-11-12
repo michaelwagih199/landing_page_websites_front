@@ -31,9 +31,9 @@ module.exports = {
         title: ["Playfair Display", "Public Sans", "sans-serif"],
       },
 
-      maxWidth: {
-        container: "75rem",
-      },
+      // maxWidth: {
+      //   container: "75rem",
+      // },
       spacing: {
         '0.25': '0.25rem',
         'custom-line': '0.1875rem',
@@ -41,6 +41,7 @@ module.exports = {
         'service-section': '45.438rem',
         'about-us-sec': '31.125rem',
         'btn-width': '10.0625rem',
+        'custom-width-web':'7.5rem'
       }
     }
   },

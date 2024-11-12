@@ -9,7 +9,7 @@ export interface Home {
   makeSpecialEvents: Makespecialevents
   footerAndPublicInfo: FooterAndPublicInfo,
   servicesAndEvents: ServicesAndEvents,
-  menus: ServicesAndEvents,
+  menus: MenuCard,
   ourTeam: OurTeam
 }
 
@@ -31,15 +31,35 @@ export interface WhyChooseUs {
   desc: string
 }
 
-export interface ServicesAndEvents {
+export interface MenuCard {
   header: string,
   titleEvent: string,
   cards: Card[]
 }
 
+
+export interface ServicesAndEvents {
+  header: string,
+  titleEvent: string,
+  cards: ServicesAndEventsCard[]
+}
+
 export interface OurTeam {
   header: string,
   cards: Card[]
+}
+
+export interface ServicesAndEventsCard {
+  id: string
+  title: string
+  desc: string,
+  cardCover: string
+  details: ServicesAndEventsDetails
+}
+
+export interface ServicesAndEventsDetails {
+  imagesList: string[]
+  videosList: string[]
 }
 
 export interface Card {

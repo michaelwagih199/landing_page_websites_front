@@ -1,1 +1,12 @@
 <app-widgets-hero [heroData]="hero"></app-widgets-hero>
+<div class="my-16 mx-custom-width-web">
+  <h1 class="text-5xl text-center font-bold text-dark font-title">{{selectedEvent.title}}</h1>
+  <div class="grid grid-cols-5 gap-y-8 gap-x-8 mt-8">
+    @for (item of selectedEvent.details.imagesList ; track item) {
+    <image_shadow_effect_widget imageSrc="{{item}}" imageClass="relative group h-[20rem] lg:w-auto"
+      class="transition duration-300 ease-in-out rounded-lg">
+    </image_shadow_effect_widget>
+    }
+  </div>
+
+</div>

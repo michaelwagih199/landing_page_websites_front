@@ -14,6 +14,7 @@ import { HomeMakeSpecialEventsComponent } from "./sections/home-make-special-eve
 import { HomeSectionsAboutUsComponent } from './sections/home-sections-about-us.component';
 import { HomeSectionsServiceEventsComponent } from './sections/home-sections-service-events.component';
 import { HomeSectionsWhyChooseUsComponent } from './sections/home-sections-why-choose-us.component';
+import { UserService } from '../../service/customers.service';
 
 @Component({
   selector: 'app-home',
@@ -37,8 +38,8 @@ import { HomeSectionsWhyChooseUsComponent } from './sections/home-sections-why-c
 })
 export class HomeComponent implements OnInit {
   private homeService = inject(HomeService);
+  private userService = inject(UserService);
   isLoading: boolean = false;
-
   hero!: Hero;
   aboutUs!: AboutUsModel;
   whyChooseUs!: WhyChooseUs;
@@ -54,6 +55,21 @@ export class HomeComponent implements OnInit {
     this.whyChooseUs = datalake.home.whyChooseUs;
     this.makeSpecialEvents = datalake.home.makeSpecialEvents;
     this.servicesAndEvents = datalake.home.servicesAndEvents;
+    this.fetchUsers()
 
   }
+
+  fetchUsers() {
+    console.log('here');
+
+    this.userService.fetchUsers().subscribe(
+        (response) => {
+          console.log(response);
+            // this.users = response;
+        },
+        (error) => {
+            console.error(error);
+        }
+    );
+}
 }

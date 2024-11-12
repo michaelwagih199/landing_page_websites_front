@@ -32,8 +32,7 @@ export class AppScreenEvents implements OnInit {
   }
 
   oExploreClick(item: Card) {
-    console.log(item);
-    this.router.navigate(['events/details']);
+    this.router.navigate(['events/details'],{ queryParams: { id: item.id} });
   }
 
 }

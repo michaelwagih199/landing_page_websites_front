@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HomeDataLake } from '../models/home-model';
-import { CateringMenus, Menu, MenusCard } from '../models/menus-model';
+import { HomeDataLake, ServicesAndEventsCard } from '../models/home-model';
+import { CateringMenus, Menu } from '../models/menus-model';
 import { CATERING_MENUS, HOME_DATA } from './static-db';
 
 @Injectable({
@@ -22,4 +22,9 @@ export class HomeService {
   getMenuByTitle(selected: string): Menu {
     return CATERING_MENUS.menus.filter(item => item.title == selected)[0];
   }
+
+  getEventById(selected: string): ServicesAndEventsCard {
+    return HOME_DATA.home.servicesAndEvents.cards.filter(item => item.id == selected)[0]
+  }
+
 }
