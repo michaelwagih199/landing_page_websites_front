@@ -1,4 +1,4 @@
-import { CommonModule, isPlatformBrowser, ViewportScroller } from '@angular/common';
+import { CommonModule, isPlatformBrowser, NgOptimizedImage, ViewportScroller } from '@angular/common';
 import { Component, EventEmitter, Inject, Input, OnDestroy, OnInit, Output, PLATFORM_ID } from '@angular/core';
 import { SlideInterface } from '../models/slide.interface';
 import { ButtonComponents } from "./btn-base.component";

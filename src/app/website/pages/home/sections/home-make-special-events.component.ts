@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Makespecialevents } from 'src/app/website/models/home-model';
 import { ButtonComponents } from "../../../widgets/btn-base.component";
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'home-make-special-events',
@@ -14,14 +15,14 @@ import { ButtonComponents } from "../../../widgets/btn-base.component";
                 <app-button class="mt-3" (btnClick)="onEventsClick()" btnTitle="Learn More"></app-button>
               </div>
               <div class="w-2/5 flex justify-end">
-                <img class="object-contain w-96 h-96" [src]="makeSpecialEvents.image" loading="lazy" alt="">
+                <img class="object-contain w-96 h-96" [ngSrc]="makeSpecialEvents.image" width="384" height="384" alt="">
               </div>
             </div>
           </div>
       </section>
     `,
   standalone: true,
-  imports: [ButtonComponents]
+  imports: [ButtonComponents,NgOptimizedImage]
 })
 
 export class HomeMakeSpecialEventsComponent {
