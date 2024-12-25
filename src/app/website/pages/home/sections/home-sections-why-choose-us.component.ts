@@ -1,3 +1,4 @@
+import { NgOptimizedImage } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { WhyChooseUs } from 'src/app/website/models/home-model';
 
@@ -10,7 +11,7 @@ import { WhyChooseUs } from 'src/app/website/models/home-model';
       <div class="flex justify-between items-center gap-32 h-full">
 
           <div class="w-2/5 flex justify-start">
-            <img class="object-contain w-96 h-96 " [src]="whyChooseUs.image" loading="lazy" alt="">
+            <img class="object-contain w-96 h-96 " [ngSrc]="whyChooseUs.image" width="384" height="384" alt="">
           </div>
 
           <div class="flex flex-col gap-8 w-3/5 ">
@@ -21,7 +22,8 @@ import { WhyChooseUs } from 'src/app/website/models/home-model';
       </div>
     </section>
   `,
-  standalone: true
+  standalone: true,
+  imports:[NgOptimizedImage]
 })
 
 export class HomeSectionsWhyChooseUsComponent  {

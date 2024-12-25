@@ -62,14 +62,14 @@ export class HomeComponent implements OnInit {
   fetchUsers() {
     console.log('here');
 
-    this.userService.fetchUsers().subscribe(
-        (response) => {
-          console.log(response);
-            // this.users = response;
-        },
-        (error) => {
-            console.error(error);
-        }
-    );
+    // this.userService.fetchUsers().subscribe(
+    //     (response) => {
+    //       console.log(response);
+    //         // this.users = response;
+    //     },
+    //     (error) => {
+    //         console.error(error);
+    //     }
+    // );
 }
 }

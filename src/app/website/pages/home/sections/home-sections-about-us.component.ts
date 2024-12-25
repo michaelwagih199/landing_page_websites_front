@@ -1,3 +1,4 @@
+import { NgOptimizedImage } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { AboutUsModel } from 'src/app/website/models/home-model';
 
@@ -12,13 +13,15 @@ import { AboutUsModel } from 'src/app/website/models/home-model';
             <h1 class="font-medium text-darkGrey text-base">{{aboutUsData.desc}}</h1>
           </div>
           <div class="w-2/5 flex justify-end">
-            <img class="object-contain w-96 h-96 " [src]="aboutUsData.image" loading="lazy" alt="">
+
+            <img class="object-contain w-96 h-96 "[ngSrc]="aboutUsData.image" width="384" height="384" alt="">
           </div>
         </div>
       </div>
     </section>
   `,
-  standalone: true
+  standalone: true,
+    imports: [NgOptimizedImage,]
 })
 
 export class HomeSectionsAboutUsComponent {
