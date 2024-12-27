@@ -1,9 +1,9 @@
 <section>
   <app-widgets-hero [heroData]="hero"></app-widgets-hero>
   <home-sections-about-us [aboutUsData]="aboutUs"></home-sections-about-us>
-  <div class="container h-[50rem] py-16 flex flex-col gap-8 justify-center items-center ">
-    <h1 class="text-[2.5rem]/[53.32px] text-dark font-title font-bold text-center">Our Team</h1>
-    <div class="flex flex-wrap justify-between gap-10 ">
+  <div class="container  sm:pt-16 sm:pb-32 pt-5 pb-20 flex flex-col gap-8 justify-center items-center ">
+    <h1 class="sm:text-[2.5rem]/[53.32px] text-xl text-dark font-title font-bold text-center">Our Team</h1>
+    <div class="flex sm:flex-row flex-col flex-wrap justify-between sm:gap-10 gap-20 sm:m-0 m-auto ">
       @for (item of ourTeam.cards ; track item) {
       <component-team-card [cardCover]="item.cardCover" [cardDesc]="item.desc"
         [cardTitle]="item.title"></component-team-card>
