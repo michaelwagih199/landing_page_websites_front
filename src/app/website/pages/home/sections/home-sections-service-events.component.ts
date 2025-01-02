@@ -8,7 +8,7 @@ import { log } from 'console';
 @Component({
   selector: 'home-sections-service-events',
   template: `
-    <section class=" sm:pb-44 sm:bt-16 pt-8 pb-44 h-auto">
+    <section class=" sm:pb-44 sm:pt-16 pt-8 pb-44 h-auto">
       <div class="container">
         <div class="flex justify-between items-center">
           <h1 class="sm:w-5/12 w-9/12 sm:text-[2.5rem]/[53.32px] text-xl font-title font-bold  ">

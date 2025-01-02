@@ -1,8 +1,8 @@
 <section>
   <app-widgets-hero [heroData]="hero"></app-widgets-hero>
-  <div class="container py-20 mt-8">
-    <h1 class="text-[2.5rem]/[53.32px] font-bold text-dark font-title text-center ">Our Events</h1>
-    <div class="grid grid-cols-4 gap-y-40 gap-x-5 mt-8">
+  <div class="container sm:pb-24 sm:pt-20 pt-8 pb-20 mt-8">
+    <h1 class="tsm:w-5/12 w-full sm:text-[2.5rem]/[53.32px] text-2xl font-title font-bold text-center ">Our Events</h1>
+    <div class="flex flex-col	 sm:flex-row justify-between sm:flex-wrap gap-y-40 gap-x-5 mt-8  items-center">
       @for (item of servicesAndEvents.cards ; track item) {
       <component-service-card [cardCover]="item.cardCover" [cardDesc]="item.desc" [cardTitle]="item.title"
         (btnClick)="oExploreClick(item)"></component-service-card>
