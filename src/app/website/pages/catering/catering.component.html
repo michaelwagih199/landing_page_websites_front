@@ -1,7 +1,7 @@
 <section>
   <app-widgets-hero [heroData]="hero"></app-widgets-hero>
-  <div class="container py-16 mt-8">
-    <h1 class="text-[2.5rem]/[53.32px] font-bold text-dark font-title ">Make a Magical Event</h1>
+  <div class="container sm:py-16 py-8 mt-8  ">
+    <h1 class="sm:text-[2.5rem]/[53.32px] text-xl font-bold text-dark font-title sm:text-left text-center ">Make a Magical Event</h1>
     <div class="h-[35.5625rem] w-full mt-8 ">
       <app-widget-image-slider [slides]="slides" (btnExploreClick)="oExploreClick()"
         (btnOrderClick)="scrollToComponent('#myComponent')"></app-widget-image-slider>

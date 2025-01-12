@@ -1,15 +1,15 @@
-<div class="h-full w-full flex justify-between gap-20">
+<div class="h-full w-full flex sm:flex-row flex-col  justify-between sm:gap-20 gap-3">
   <img class="bg-cover w-[36.875rem]]" [src]="getCurrentSlide().url" loading="eager" alt="slider image">
-  <div class="flex flex-col justify-center gap-8 w-3/5">
-    <h1 class="text-4xl font-medium font-title">{{getCurrentSlide().title}}</h1>
-    <p class="font-medium ">{{getCurrentSlide().desc}}</p>
-    <div class="flex gap-5 mt-8">
+  <div class="flex flex-col justify-center sm:gap-8 gap-3 sm:w-3/5 w-full sm:text-left text-center">
+    <h1 class="sm:text-4xl text-lg font-medium font-title">{{getCurrentSlide().title}}</h1>
+    <p class="sm:font-medium font-normal sm:text-base text-sm ">{{getCurrentSlide().desc}}</p>
+    <div class="flex gap-5 mt-8 sm:mx-0 mx-auto">
       <app-button (btnClick)="btnExploreClick.emit()" btnTitle="Explore"></app-button>
       <button
         class="rounded-full border border-orange px-8 py-3 w-btn-width text-lg bg-white shadow-md font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-btnGradient-orange1 to-btnGradient-orange2 hover:from-btnGradient-orangeHover1 hover:to-btnGradient-orangeHover2 transition-colors duration-200"
         (click)="btnOrderClick.emit()">Order Now</button>
     </div>
-    <div class="flex gap-5 mt-8">
+    <div class="flex gap-5 sm:mt-8 mt-2 mx-auto sm:mx-0">
       <div (click)="goToPrevious()" class="w-10 h-10 rounded-full bg-white hover:bg-veryLightPink2  cursor-pointer flex justify-center items-center transition-colors duration-200 ">
         <img class="rotate-180" src = "/assets/images/icons/arrows_filled.svg" alt="arrows_filled"/>
       </div>
