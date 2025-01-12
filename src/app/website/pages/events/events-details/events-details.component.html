@@ -1,7 +1,7 @@
 <app-widgets-hero [heroData]="hero"></app-widgets-hero>
-<div class="my-16 mx-custom-width-web">
-  <h1 class="text-5xl text-center font-bold text-dark font-title">{{selectedEvent.title}}</h1>
-  <div class="grid grid-cols-5 gap-y-8 gap-x-8 mt-8">
+<div class="container sm:py-16 py-8 sm:px-0 px-8">
+  <h1 class="sm:text-5xl text-2xl text-center  w-full  font-title font-bold">{{selectedEvent.title}}</h1>
+  <div class="grid lg:grid-cols-4 sm:grid-cols-3 grid-cols-1 gap-y-8 gap-x-8 mt-8">
     @for (item of selectedEvent.details.imagesList ; track item) {
     <image_shadow_effect_widget imageSrc="{{item}}" imageClass="relative group h-[20rem] lg:w-auto"
       class="transition duration-300 ease-in-out rounded-lg">
@@ -10,3 +10,4 @@
   </div>
 
 </div>
+ 
